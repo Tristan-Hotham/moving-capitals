@@ -1,0 +1,159 @@
+action,state,state_qid,from,to,year,change,reason,source
+drop,Timurid Empire,Q484195,Herat,Samarkand,1507,removed,"Samarkand was the Timurid capital before Herat (Shah Rukh moved to Herat), not after; Wikidata gives Samarkand no dates, so the order was misread.",https://en.wikipedia.org/wiki/Timurid_Empire
+drop,State of the Teutonic Order,Q156020,Königsberg,Malbork Castle,1525,removed,"Malbork was the Teutonic Order's seat before Königsberg (until 1457, when the Grand Master moved to Königsberg), not after; misread order.",https://en.wikipedia.org/wiki/State_of_the_Teutonic_Order
+drop,Kingdom of Hungary,Q171150,Buda,Bratislava,1526,removed,"Duplicate of the move to Pressburg (Bratislava) recorded for the Habsburg Kingdom of Hungary in 1536, with a different year; kept once, at 1536.",https://en.wikipedia.org/wiki/Bratislava
+drop,Bahmani Sultanate,Q374521,Bidar,Kalaburagi,1527,removed,"Gulbarga (Kalaburagi) was the Bahmani capital before Bidar (until the move to Bidar in the 1420s), not after; misread order.",https://en.wikipedia.org/wiki/Bahmani_Sultanate
+drop,Holy Roman Empire,Q12548,Vienna,Regensburg,1594,removed,"Regensburg was the seat of the Imperial Diet (permanent from 1663), not a move of the imperial capital.",https://en.wikipedia.org/wiki/Perpetual_Diet_of_Regensburg
+drop,Polish-Lithuanian Commonwealth,Q172107,Vilnius,Warsaw,1596,removed,Vilnius was the Lithuanian capital; the Commonwealth's royal seat moved from Kraków (added by hand instead).,https://en.wikipedia.org/wiki/Warsaw
+drop,Holy Roman Empire,Q12548,Regensburg,Wetzlar,1689,removed,"Wetzlar was the seat of the Imperial Chamber Court from 1689, not a move of the imperial capital.",https://en.wikipedia.org/wiki/Reichskammergericht
+drop,Prussia,Q38872,Königsberg,Berlin,1701,removed,"Artefact of two items: Königsberg was the capital of ducal Prussia, but the Hohenzollern court was already in Berlin; the 1701 coronation did not move it.",https://en.wikipedia.org/wiki/Kingdom_of_Prussia
+drop,Kingdom of Prussia,Q27306,Klaipėda,Berlin,1708,removed,"Wikidata dates Memel 1707 to 1708, a slip for 1807 to 1808; replaced by the moves of 1807 to 1809 (see additions).",https://kehilalinks.jewishgen.org/memel/oldmemel/memel1.html
+drop,Poland,Q36,Kraków,Warsaw,1795,removed,"Duplicate of the move from Kraków to Warsaw in 1596 (recorded for the Polish-Lithuanian Commonwealth), with the wrong year.",https://en.wikipedia.org/wiki/Warsaw
+drop,Portuguese Empire,Q200464,Lisbon,Rio de Janeiro,1815,removed,Duplicate of the court's move of 1808; 1815 is when Brazil was raised to a kingdom.,https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil
+drop,"United Kingdom of Portugal, Brazil and the Algarves",Q903779,Lisbon,Rio de Janeiro,1825,removed,"Misread order: the court returned from Rio to Lisbon in 1821, it did not go back to Rio.",https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil
+drop,Kingdom of Galicia,Q303421,A Coruña,Lugo,1833,removed,The Kingdom of Galicia was divided into provinces in 1833; Lugo has no dates and was not its next capital.,https://en.wikipedia.org/wiki/Kingdom_of_Galicia
+drop,Republic of Texas,Q170588,Austin,Washington-on-the-Brazos,1846,removed,"Texas joined the United States in 1846; Washington-on-the-Brazos was an earlier seat (1836, 1842 to 1845), not the next one.",https://en.wikipedia.org/wiki/Republic_of_Texas
+drop,Kingdom of Hungary,Q171150,Bratislava,Budapest,1873,removed,Duplicate and misread: Buda had been the seat since 1784 and Budapest is Buda merged with Pest in 1873.,https://en.wikipedia.org/wiki/Budapest
+drop,Japan,Q17,Heian-kyō,Tokyo City,1889,removed,Misread: the move from Kyoto to Tokyo was in 1868 (added by hand); Tokyo City was created in 1889 in the same place.,https://en.wikipedia.org/wiki/Tokyo
+drop,Principality of Albania,Q187035,Durrës,Lushnjë,1920,removed,Lushnjë hosted the congress that chose Tirana as capital in 1920; it was not itself a capital.,https://en.wikipedia.org/wiki/Congress_of_Lushnjë
+drop,National Government of the Republic of China,Q2308761,Guangzhou,Nanjing,1927,removed,Republic of China sequence replaced by a checked one (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Republic of China,Q13426199,Jingzhao,Nan-ching,1927,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Republic of China,Q13426199,Beijing,Nan-ching,1928,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Jingzhao,Nan-ching,1928,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Principality of Waldeck,Q165763,Bad Arolsen,Waldeck,1929,removed,Waldeck was merged into Prussia in 1929; Waldeck town was not its next capital.,https://en.wikipedia.org/wiki/Free_State_of_Waldeck
+drop,Republic of China,Q13426199,Nan-ching,Ch'ung-ch'ing,1937,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,France,Q142,Paris,Bordeaux,1940,removed,"France 1940 to 1944: Wikidata mixes Vichy France and Free France (London, Brazzaville, Algiers); replaced by the government's own wartime seats (see additions).",https://en.wikipedia.org/wiki/Vichy_France
+drop,France,Q142,Paris,Tours,1940,removed,"France 1940 to 1944: Wikidata mixes Vichy France and Free France (London, Brazzaville, Algiers); replaced by the government's own wartime seats (see additions).",https://en.wikipedia.org/wiki/Vichy_France
+drop,France,Q142,Paris,Brazzaville,1940,removed,"France 1940 to 1944: Wikidata mixes Vichy France and Free France (London, Brazzaville, Algiers); replaced by the government's own wartime seats (see additions).",https://en.wikipedia.org/wiki/Vichy_France
+drop,France,Q142,Paris,London,1940,removed,"France 1940 to 1944: Wikidata mixes Vichy France and Free France (London, Brazzaville, Algiers); replaced by the government's own wartime seats (see additions).",https://en.wikipedia.org/wiki/Vichy_France
+drop,France,Q142,Paris,Vichy,1940,removed,"France 1940 to 1944: Wikidata mixes Vichy France and Free France (London, Brazzaville, Algiers); replaced by the government's own wartime seats (see additions).",https://en.wikipedia.org/wiki/Vichy_France
+drop,France,Q142,Brazzaville,Algiers,1942,removed,"Free France, not the French state's seat (see above).",https://en.wikipedia.org/wiki/Free_France
+drop,France,Q142,Algiers,Bayeux,1944,removed,"Free France, not the French state's seat (see above).",https://en.wikipedia.org/wiki/Free_France
+drop,Manchukuo,Q30623,Linjiang,Changchun,1945,removed,Manchukuo ended at Linjiang in 1945; Changchun (Hsinking) had no dates and was the earlier capital.,https://en.wikipedia.org/wiki/Manchukuo
+drop,Republic of China,Q13426199,Ch'ung-ch'ing,Nan-ching,1946,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Jingzhao,Nan-ching,1946,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Mallabhum,Q6744020,Bishnupur,Laugram,1947,removed,"Laugram was Mallabhum's first capital (from 694), not its last; the state joined India in 1947, so the order was misread.",https://en.wikipedia.org/wiki/Mallabhum
+drop,Republic of China,Q13426199,Nan-ching,Ch'ung-ch'ing,1949,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Republic of China,Q13426199,Nan-ching,Kuang-chou,1949,removed,Republic of China: Wikidata's statements overlap (the same city under several items and dates); replaced by a checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Nan-ching,Taipei,1949,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Nan-ching,Chengdu,1949,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Nan-ching,Ch'ung-ch'ing,1949,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Nan-ching,Ch'ung-ch'ing,1949,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,Taiwan,Q865,Nan-ching,Kuang-chou,1949,removed,Taiwan item repeats the Republic of China's statements; replaced by the checked sequence (see additions).,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+drop,West Pakistan,Q2342822,Karachi,Rawalpindi,1959,removed,"Recorded on the West Pakistan province item, whose capital was Lahore; these were moves of Pakistan's capital, recorded under Pakistan instead.",https://en.wikipedia.org/wiki/Islamabad
+drop,West Pakistan,Q2342822,Rawalpindi,Islamabad,1965,removed,"As above: a move of Pakistan's capital, kept under Pakistan (1967).",https://en.wikipedia.org/wiki/Islamabad
+drop,Germany,Q183,Berlin,Bonn,1973,removed,"A second, overlapping Bonn statement (1973 to 1990) repeats the move of 1949.",https://en.wikipedia.org/wiki/Bonn
+drop,Germany,Q183,Bonn,Berlin,1999,removed,Duplicate: Berlin became the capital on reunification in 1990; 1999 is when parliament and most ministries moved (kept as a note).,https://en.wikipedia.org/wiki/Berlin/Bonn_Act
+fix,Russian Empire,Q34266,Moscow,Saint Petersburg,1730,year 1730 to 1732,"The court returned to St Petersburg under Empress Anna in 1732, not 1730.",https://en.wikipedia.org/wiki/Saint_Petersburg
+check,Portuguese Empire,Q200464,Rio de Janeiro,Lisbon,1821,none (confirmed),Checked: King João VI returned to Lisbon in 1821 (Wikidata's Kingdom of Portugal item says 1822; the duplicate is merged into this one).,https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil
+fix,Omani Empire,Q22684779,Muscat,Stone Town,1824,year 1824 to 1840,"Said bin Sultan moved his capital from Muscat to Stone Town, Zanzibar, in 1840.",https://en.wikipedia.org/wiki/Said_bin_Sultan
+fix,Saudi Arabia,Q851,Diriyah,Riyadh,1819,year 1819 to 1824,Diriyah was destroyed in 1818; Turki ibn Abdullah made Riyadh the capital of the second Saudi state in 1824.,https://en.wikipedia.org/wiki/Riyadh
+fix,Helvetic Republic,Q206696,Aarau,Bern,1798,to Bern to Lucerne,The Helvetic Republic's capital moved from Aarau to Lucerne in 1798 and to Bern in 1799.,https://en.wikipedia.org/wiki/Helvetic_Republic
+check,Helvetic Republic,Q206696,Lucerne,Bern,1799,none (confirmed),Checked (see above).,https://en.wikipedia.org/wiki/Helvetic_Republic
+fix,Federal Republic of Central America,Q190025,Guatemala City,San Salvador,1834,from Guatemala City to Sonsonate,The federal capital moved from Guatemala City to Sonsonate and then San Salvador in 1834.,https://en.wikipedia.org/wiki/Federal_Republic_of_Central_America
+check,British Raj,Q129286,Kolkata,New Delhi,1911,none (confirmed),"Checked: the move from Calcutta to Delhi was announced at the Delhi Durbar in 1911; New Delhi, built beside the old city, was inaugurated in 1931 (same place, not a second move).",https://en.wikipedia.org/wiki/New_Delhi
+check,Brazil,Q155,Rio de Janeiro,Brasília,1960,none (confirmed),Checked: Brasília was inaugurated as capital on 21 April 1960.,https://en.wikipedia.org/wiki/Brasília
+check,Russian Socialist Federative Soviet Republic,Q2305208,Saint Petersburg,Moscow,1918,none (confirmed),Checked: the Bolshevik government moved from Petrograd to Moscow in March 1918.,https://en.wikipedia.org/wiki/Moscow
+check,Nigeria,Q1033,Lagos,Abuja,1991,none (confirmed),Checked: the government formally moved to Abuja on 12 December 1991.,https://en.wikipedia.org/wiki/Abuja
+check,Pakistan,Q843,Rawalpindi,Islamabad,1967,none (confirmed),Checked: Rawalpindi was the interim capital from 1959 while Islamabad was built; Islamabad became the capital in 1967.,https://en.wikipedia.org/wiki/Islamabad
+check,Kazakhstan,Q232,Almaty,Astana,1997,none (confirmed),Checked: the capital moved from Almaty to Akmola (renamed Astana in 1998) on 10 December 1997.,https://en.wikipedia.org/wiki/Astana
+check,Myanmar,Q836,Yangon,Naypyidaw,2005,none (confirmed),Checked: ministries began moving on 6 November 2005; the new capital was named Naypyidaw in March 2006.,https://en.wikipedia.org/wiki/Naypyidaw
+check,Tanzania,Q924,Dar es Salaam,Dodoma,1996,none (confirmed),"Checked, with a caveat: Dodoma was chosen in 1973 and the National Assembly moved in 1996, but most of the government moved only around 2019.",https://en.wikipedia.org/wiki/Dodoma
+check,Ivory Coast,Q1008,Abidjan,Yamoussoukro,1983,none (confirmed),Checked: Yamoussoukro was made the capital in 1983; most government offices and embassies stayed in Abidjan.,https://en.wikipedia.org/wiki/Yamoussoukro
+check,Germany,Q183,Bonn,Berlin,1990,none (confirmed),Checked: Berlin became the capital of reunified Germany on 3 October 1990; the Bundestag voted in 1991 to move and the government moved in 1999.,https://en.wikipedia.org/wiki/Berlin/Bonn_Act
+check,Germany,Q183,Berlin,Bonn,1949,none (confirmed),Checked: Bonn was chosen as the provisional seat of the new Federal Republic in 1949.,https://en.wikipedia.org/wiki/Bonn
+check,Australia,Q408,Melbourne,Canberra,1927,none (confirmed),Checked: Parliament first sat in Canberra on 9 May 1927.,https://en.wikipedia.org/wiki/Canberra
+check,Kingdom of Portugal,Q45670,Lisbon,Rio de Janeiro,1808,none (confirmed),Checked: the Portuguese court left Lisbon in November 1807 and reached Rio de Janeiro in March 1808.,https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil
+check,United States,Q30,New York City,Philadelphia,1790,none (confirmed),Checked: the Residence Act of 1790 moved the capital to Philadelphia while Washington was built.,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+check,United States,Q30,Philadelphia,"Washington, D.C.",1800,none (confirmed),Checked: Congress first met in Washington in November 1800.,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+check,Equatorial Guinea,Q983,Malabo,Ciudad de la Paz,2026,none (confirmed),"Checked: a presidential decree reported in January 2026 moved the capital to Ciudad de la Paz, with government bodies given a year to relocate.",https://www.africanews.com/2026/01/05/equatorial-guinea-relocates-capital/
+check,Holy Roman Empire,Q12548,Vienna,Prague,1583,none (confirmed),Checked: Rudolf II moved the imperial court from Vienna to Prague in 1583.,"https://en.wikipedia.org/wiki/Rudolf_II,_Holy_Roman_Emperor"
+check,Spain,Q29,Valladolid city,Madrid,1606,none (confirmed),Checked: Philip III's court was at Valladolid from 1601 and returned to Madrid in 1606.,https://en.wikipedia.org/wiki/Valladolid
+check,France,Q142,Paris,Versailles,1871,none (confirmed),"Checked: the government and National Assembly sat at Versailles from March 1871, during and after the Paris Commune.",https://en.wikipedia.org/wiki/French_Third_Republic
+check,Qing dynasty,Q8733,Fengtian Fu,Shuntian Fu,1644,none (confirmed),Checked: the Qing moved their capital from Mukden (Shenyang) to Beijing in 1644; Mukden stayed a secondary capital.,https://en.wikipedia.org/wiki/Shenyang
+add,Republic of Turkey,Q43,Istanbul,Ankara,1923,added,"Ankara, seat of the nationalist Grand National Assembly since 1920, was declared the capital on 13 October 1923, a fortnight before the Republic; Istanbul had been the Ottoman capital since 1453.",https://en.wikipedia.org/wiki/Ankara
+add,Pakistan,Q843,Karachi,Rawalpindi,1959,added,Karachi was the first capital; in 1959 the government chose to build Islamabad in the north and moved to neighbouring Rawalpindi as an interim capital.,https://en.wikipedia.org/wiki/Islamabad
+add,Japan,Q17,Kyoto (Heian-kyō),Tokyo,1868,added,"After the Meiji Restoration, Edo was renamed Tokyo (eastern capital) in 1868 and the emperor settled there in 1869. Kyoto had been the imperial capital since 794.",https://en.wikipedia.org/wiki/Tokyo
+add,Holy Roman Empire,Q12548,Prague,Vienna,1612,added,Rudolf II had moved the imperial court to Prague in 1583; his successor Matthias took it back to Vienna in 1612.,"https://en.wikipedia.org/wiki/Rudolf_II,_Holy_Roman_Emperor"
+add,Polish-Lithuanian Commonwealth,Q172107,Kraków,Warsaw,1596,added,Sigismund III Vasa moved the royal court from Kraków to Warsaw from 1596; Kraków stayed the coronation city.,https://en.wikipedia.org/wiki/Warsaw
+add,Kingdom of Prussia,Q27306,Berlin,Memel (Klaipėda),1807,added,"After defeat by Napoleon the Prussian king and government took refuge in Memel, the kingdom's temporary capital in 1807 and 1808.",https://kehilalinks.jewishgen.org/memel/oldmemel/memel1.html
+add,Kingdom of Prussia,Q27306,Memel (Klaipėda),Königsberg,1808,added,The court moved on from Memel to Königsberg in 1808.,https://en.wikipedia.org/wiki/Louise_of_Mecklenburg-Strelitz
+add,Kingdom of Prussia,Q27306,Königsberg,Berlin,1809,added,The king and queen returned to Berlin in December 1809.,https://en.wikipedia.org/wiki/Louise_of_Mecklenburg-Strelitz
+add,France,Q142,Versailles,Paris,1879,added,Parliament had sat at Versailles since the Commune of 1871; it returned to Paris in 1879.,https://en.wikipedia.org/wiki/French_Third_Republic
+add,France,Q142,Paris,Tours,1940,added,"With German forces near Paris, the government left for the châteaux around Tours on 10 June 1940.",https://en.wikipedia.org/wiki/Vichy_France
+add,France,Q142,Tours,Bordeaux,1940,added,"It moved on to Bordeaux on 14 June 1940, where the armistice was decided.",https://en.wikipedia.org/wiki/Vichy_France
+add,France,Q142,Bordeaux,Vichy,1940,added,From July 1940 the French State governed from the spa town of Vichy.,https://en.wikipedia.org/wiki/Vichy_France
+add,France,Q142,Vichy,Paris,1944,added,The Provisional Government of the French Republic returned to Paris after the liberation in August 1944.,https://en.wikipedia.org/wiki/Provisional_Government_of_the_French_Republic
+add,Republic of China,Q13426199,Nanjing,Beijing,1912,added,"The provisional government founded at Nanjing in January 1912 moved to Beijing, Yuan Shikai's base, within months.",https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Beijing,Nanjing,1928,added,The Nationalists set up their government in Nanjing in 1927 and made it the capital once the Beijing government fell in 1928.,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Nanjing,Chongqing,1937,added,"Fleeing the Japanese advance in November 1937, the government moved up the Yangtze (by way of Wuhan) to Chongqing, the wartime capital.",https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Chongqing,Nanjing,1946,added,The government returned to Nanjing in May 1946.,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Nanjing,Guangzhou,1949,added,As the civil war was lost the government left Nanjing for Guangzhou in 1949...,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Guangzhou,Chongqing,1949,added,...then Chongqing in October 1949...,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Chongqing,Chengdu,1949,added,...then Chengdu in November...,https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China
+add,Republic of China,Q13426199,Chengdu,Taipei,1949,added,"...and in December 1949 Taipei, where it has been since.",https://en.wikipedia.org/wiki/Taipei
+add,United States,Q30,Philadelphia,Baltimore,1776,added,The Continental Congress fled the British advance to Baltimore in December 1776.,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Baltimore,Philadelphia,1777,added,It returned to Philadelphia in March 1777.,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Philadelphia,Lancaster,1777,added,When the British took Philadelphia in September 1777 Congress met for a single day in Lancaster...,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Lancaster,York,1777,added,"...then in York, Pennsylvania, where it adopted the Articles of Confederation.",https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,York,Philadelphia,1778,added,Congress returned to Philadelphia in July 1778.,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Philadelphia,Princeton,1783,added,Mutinous soldiers demanding pay drove Congress out of Philadelphia to Princeton in June 1783 (Princeton coordinates: wp).,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Princeton,Annapolis,1783,added,"In November 1783 it moved to Annapolis, where Washington resigned his commission.",https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Annapolis,Trenton,1784,added,In November 1784 Congress met in Trenton...,https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,United States,Q30,Trenton,New York,1785,added,"...and from January 1785 in New York, which stayed the capital until 1790.",https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States
+add,Province of Canada,,Kingston,Montreal,1844,added,The united Province of Canada had no fixed capital. Its parliament first sat at Kingston (1841) and moved to Montreal in 1844 (Montreal coordinates: wp).,https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Province of Canada,,Montreal,Toronto,1850,added,"After rioters burned the parliament in Montreal in 1849, the seat alternated: Toronto first, from 1850 (years of the first session in each seat).",https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Province of Canada,,Toronto,Quebec City,1852,added,Quebec City from 1852 (coordinates: wp).,https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Province of Canada,,Quebec City,Toronto,1855,added,Toronto again from 1855.,https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Province of Canada,,Toronto,Quebec City,1860,added,"Quebec City again from 1860, while Queen Victoria's choice of Ottawa (1857) was being built.",https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Province of Canada,,Quebec City,Ottawa,1866,added,Parliament first met in Ottawa in 1866; it became the capital of the new Dominion of Canada in 1867.,https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute
+add,Côte d'Ivoire (French colony),,Grand-Bassam,Bingerville,1900,added,Yellow fever drove the colonial capital from the coast at Grand-Bassam to Bingerville in 1900 (Bingerville coordinates: wp).,https://en.wikipedia.org/wiki/Bingerville
+add,Côte d'Ivoire (French colony),,Bingerville,Abidjan,1933,added,The capital moved to the growing port of Abidjan in 1933.,https://en.wikipedia.org/wiki/Abidjan
+add,British Honduras (Belize),Q242,Belize City,Belmopan,1970,added,"After Hurricane Hattie flooded Belize City in 1961, a new inland capital, Belmopan, was built; the government moved in 1970.",https://en.wikipedia.org/wiki/Belmopan
+add,Philippines,Q928,Manila,Quezon City,1948,added,Republic Act 333 made the new planned Quezon City the capital in 1948.,https://en.wikipedia.org/wiki/Quezon_City
+add,Philippines,Q928,Quezon City,Manila,1976,added,Presidential Decree 940 restored Manila as the capital in 1976.,https://en.wikipedia.org/wiki/Quezon_City
+add,Sri Lanka,Q854,Colombo,Sri Jayawardenepura Kotte,1982,added,Parliament moved to a new building at Kotte in 1982 and Kotte is the legislative capital; Colombo remains the executive and commercial capital.,https://en.wikipedia.org/wiki/Sri_Jayawardenepura_Kotte
+same place,,,Edo,Tokyo Prefecture,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Tokyo Prefecture,Tokyo City,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Tokyo City,Tokyo,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Shuntian Fu,Jingzhao,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Constantinople,Istanbul,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Buda,Budapest,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Bakhchysarai,Staroselye,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Jingzhao,Beijing,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Shuntian Fu,Beijing,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Hsinking,Changchun,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Delhi,New Delhi,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Old Delhi,Delhi,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Königsberg,Kaliningrad,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+same place,,,Kerto,Pleret,,not counted as a move,Two names or two Wikidata items for the same city.,https://www.wikidata.org/
+label,,,Bago,Pegu (Bago),,shown as Pegu (Bago),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Bratislava,Pressburg (Bratislava),,shown as Pressburg (Bratislava),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Ch'ung-ch'ing,Chongqing,,shown as Chongqing,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Fengtian Fu,Mukden (Shenyang),,shown as Mukden (Shenyang),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/Shenyang
+label,,,Heian-kyō,Kyoto (Heian-kyō),,shown as Kyoto (Heian-kyō),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Ho Chi Minh City,Saigon (Ho Chi Minh City),,shown as Saigon (Ho Chi Minh City),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Hsinking,Hsinking (Changchun),,shown as Hsinking (Changchun),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Inwa,Ava (Inwa),,shown as Ava (Inwa),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Jingzhao,Beijing,,shown as Beijing,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Kaliningrad,Königsberg,,shown as Königsberg,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Klaipėda,Memel (Klaipėda),,shown as Memel (Klaipėda),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/Klaipėda
+label,,,Kolkata,Calcutta (Kolkata),,shown as Calcutta (Kolkata),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/Kolkata
+label,,,Kota Kinabalu,Jesselton (Kota Kinabalu),,shown as Jesselton (Kota Kinabalu),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Kuang-chou,Guangzhou,,shown as Guangzhou,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Lutherstadt Wittenberg,Wittenberg,,shown as Wittenberg,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Madrid city,Madrid,,shown as Madrid,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Mahikeng,Mafeking (Mahikeng),,shown as Mafeking (Mahikeng),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Nan-ching,Nanjing,,shown as Nanjing,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,New Delhi,Delhi (New Delhi from 1931),,shown as Delhi (New Delhi from 1931),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/New_Delhi
+label,,,New York City,New York,,shown as New York,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Old City of Taiz,Taiz,,shown as Taiz,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Phra Nakhon Si Ayutthaya,Ayutthaya,,shown as Ayutthaya,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Q254861,Waikīkī,,shown as Waikīkī,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/Waikiki
+label,,,Saint Petersburg,St Petersburg,,shown as St Petersburg,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Shuntian Fu,Beijing,,shown as Beijing,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Stone Town,Zanzibar (Stone Town),,shown as Zanzibar (Stone Town),Clearer or more usual English name for display; the Wikidata item is unchanged.,https://en.wikipedia.org/wiki/Stone_Town
+label,,,Toledo city,Toledo,,shown as Toledo,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,Valladolid city,Valladolid,,shown as Valladolid,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+label,,,"Washington, D.C.",Washington,,shown as Washington,Clearer or more usual English name for display; the Wikidata item is unchanged.,https://www.wikidata.org/
+merge,Kingdom of Portugal,Q45670,Rio de Janeiro,Lisbon,1822,merged into Portuguese Empire 1821,Same move recorded on another Wikidata item with a different year.,https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil

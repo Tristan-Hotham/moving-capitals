@@ -1,0 +1,140 @@
+<!-- wp:paragraph -->
+<p><em>Capitals feel permanent, but they move more often than you might think. I mapped every move of a capital since 1500 that the open record knows about, checked the famous ones by hand, and found {{n|int}} moves: from Moscow to a new city on the Neva, from Lisbon across the Atlantic, and from coastal ports to brand-new cities in the interior.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/moving-capitals/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23847842">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Ask most people to name a capital that moved and they will say Brasília, or perhaps Canberra. Both are good answers. Brazil built Brasília on an empty plateau in about four years and moved there from Rio de Janeiro in 1960; Australia's parliament first sat in Canberra in 1927, after a quarter of a century in Melbourne. But the list goes on much further than that: Abuja, Islamabad, Naypyidaw, Astana, Dodoma, Yamoussoukro, Gitega. And in January 2026 Equatorial Guinea moved its capital from Malabo, on an island, to Ciudad de la Paz, a planned city in the mainland forest.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I wanted to see them all at once, as arcs on a map from the old capital to the new. Wikidata, the open database behind Wikipedia, records the capitals of thousands of states with the years each held the role, so in principle the arcs can be read straight out of it. In practice it took a lot of checking, which turned out to be half the story.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_map.png|A light world map with {{n|int}} coloured arcs, each joining an old capital to a new one. They cluster thickly in Europe, India and China; a long dashed blue arc crosses the Atlantic from Lisbon to Rio de Janeiro, another runs down the coast of Africa from Muscat to Zanzibar, and short teal arcs move inland in Brazil, Nigeria, Tanzania, Myanmar and Australia|Every capital move since 1500 in the data, coloured by century. Dashed arcs are temporary seats.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A restless 20th century</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Since 1500 I count {{n|int}} moves by {{n_states|int}} states: {{n_lasting|int}} that lasted and {{n_temp|int}} temporary ones, seats taken up in wartime or a crisis, or moves that went back within ten years. The 20th century is the busiest, with {{c20.n|int}}. Some were born of revolution and war: the Bolsheviks left Petrograd for Moscow in 1918, Atatürk's new republic made Ankara its capital in 1923, and in {{busiest_year.y|yr}} the Republic of China fled from Nanjing to Guangzhou, Chongqing, Chengdu and finally Taipei in a single year. Others were careful plans, decades in the making.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_decade.png|A bar chart of capital moves per decade from 1500 to 2026, coloured by century. Bars are low before 1750, rise in the late 18th century, stay steady through the 19th, and peak in the 1940s at {{busiest_decade.n|int}} moves, most of them pale temporary ones; labels mark St Petersburg 1712, Lisbon to Rio 1808, Petrograd to Moscow 1918, Nanjing to Taipei 1949, Brasília 1960 and Ciudad de la Paz 2026|Capital moves per decade. Pale bars are temporary moves.}}
+
+<!-- wp:paragraph -->
+<p>The quieter early centuries are partly real and partly an artefact. Wikidata knows an astonishing amount about the small German principalities of the 17th and 18th centuries, which moved their courts a few kilometres to a new palace, and far less about Africa, Asia and the Americas before colonial rule.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Across the street, and across an ocean</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most moves are short. The median lasting move is {{median_km_lasting|int}} km, and {{under_100_lasting_pct|pc}} of them covered less than 100 km. My favourite is the shortest: in 1782 King Rama I moved his capital from Thonburi across the Chao Phraya river to the village of Bangkok, {{shortest_lasting.0.km|int}} km away.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>At the other end is a flight. In November 1807, with Napoleon's army marching on Lisbon, the Portuguese royal family, the government and thousands of courtiers boarded ships for Brazil. From 1808 the Portuguese empire was ruled from Rio de Janeiro, {{lisbon_rio.km|int}} km away: the only time a European power was governed from one of its colonies. King João VI went home in 1821. The longest move that lasted is the Sultan of Oman's: in {{ex.zanzibar.year|yr}} Said bin Sultan moved his capital {{ex.zanzibar.km|int}} km from Muscat to Stone Town on Zanzibar, the hub of his trade in cloves, ivory and enslaved people.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_longest.png|A horizontal bar chart of the ten longest capital moves. Lisbon to Rio de Janeiro in 1808 is far the longest at {{lisbon_rio.km|int}} km, shown pale and dashed as temporary; next are Muscat to Zanzibar 1840 at {{ex.zanzibar.km|int}} km, Chengdu to Taipei 1949, Yogyakarta to Bukittinggi 1948 and Calcutta to Delhi 1911|The ten longest moves since 1500. Pale, dashed bars are temporary seats.}}
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>For thirteen years a European empire was ruled from Rio de Janeiro, {{lisbon_rio.km|int}} km from Lisbon: the longest capital move since 1500.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Built from nothing, and away from the sea</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{n_purpose_built|int}} of the moves went to a capital that was built, or laid out as a new town, for the purpose. The idea is old: Peter the Great founded St Petersburg in 1703 and moved his court there in 1712, and the margraves of Baden laid out Karlsruhe in 1715 as a fan of streets around their palace. But {{n_pb_since_1900|int}} of the {{n_purpose_built|int}} came after 1900, when building a capital became a way of building a nation: New Delhi, Canberra, Brasília, Islamabad, Belmopan, Gaborone, Abuja, Naypyidaw, Ciudad de la Paz.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_purpose.png|A timeline of {{n_purpose_built|int}} purpose-built capitals, each a short line from when building began to when the government moved in: Hyderabad 1591, Versailles 1682, St Petersburg 1712, Karlsruhe 1715 and Washington 1800, then a cluster in the 20th century from New Delhi and Canberra to Brasília, Islamabad, Abuja and Naypyidaw, and Ciudad de la Paz in 2026|Capitals built for the purpose: when building began (hollow) and when the government moved in (filled).}}
+
+<!-- wp:paragraph -->
+<p>Many of the modern moves have something else in common: they left the coast. Of the {{sea.modern_n|int}} lasting moves since 1900, {{sea.inland_n|int}} ({{sea.inland_pct|pc}}) left a capital within 50 km of the sea for one at least 50 km inland, against {{sea.early_inland_pct|pc}} before 1900. Rio to Brasília, Lagos to Abuja, Dar es Salaam to Dodoma, Yangon to Naypyidaw, Abidjan to Yamoussoukro, Karachi to Islamabad, Malabo to Ciudad de la Paz: a port built for trade, often under colonial rule, gives way to a capital in the middle of the country. Brasília is {{centre.brasilia|int}} km closer to Brazil's centre than Rio. Only one move went the other way, the Republic of China's retreat to Taipei.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_sea.png|A slope chart of distance from the sea before and after each lasting capital move since 1900. {{sea.inland_n|int}} coloured lines fall steeply from coastal old capitals to inland new ones, labelled Canberra, Yaoundé, Naypyidaw, Dodoma, Abuja, Moscow, Delhi, Brasília and Rawalpindi; grey lines for the other moves stay roughly level|Distance from the sea before and after, lasting moves since 1900. Coloured: from the coast to the interior.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The restless and the missing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Counted by present-day country, the United States has the most moves, {{countries.0.n|int}}, though only {{countries.0.lasting|int}} lasted. Eleven belong to the young republic: the Continental Congress fled the British to Baltimore, Lancaster and York, was chased out of Philadelphia in 1783 by soldiers demanding their pay, and met in Princeton, Annapolis, Trenton and New York before Philadelphia and, in 1800, Washington. Germany comes next with {{countries.1.n|int}}, almost all of them small German courts, then India and China.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_countries.png|A horizontal bar chart of capital moves since 1500 by present-day country: the United States {{countries.0.n|int}}, Germany {{countries.1.n|int}}, India and China {{countries.2.n|int}} each, Russia and France {{countries.4.n|int}} each, then Italy, Romania, Canada and others, split into lasting and temporary moves|Most capital moves since 1500, by present-day country.}}
+
+<!-- wp:paragraph -->
+<p>Those counts say as much about the record as about restlessness. {{raw.sovereign_one_capital_pct|pc}} of today's sovereign states have just one capital in Wikidata, and some famous moves are simply not there. Turkey's entry starts with Ankara in 1923, with no Istanbul before it. Japan's has no move from Kyoto to Tokyo. Canada's has no Kingston, Montreal, Toronto or Quebec City, though its parliament moved between them for 25 years before settling in Ottawa. Other moves are there but wrong: the order misread, the seat of a court taken for the capital, the same move recorded twice with different years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>So I checked the moves people know best and anything that looked odd, against cited sources, and wrote every decision down: {{edits.drop|int}} automatic moves removed, {{edits.fix|int}} corrected, {{edits.check|int}} confirmed and {{edits.add|int}} added. The edits file is part of the data, and I hope someone uses it to fix Wikidata.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_europe.png|A map of Europe with every move that ends there, labelled at the new capital with the year: St Petersburg 1712, Moscow 1918, Warsaw 1596, Berlin 1990, Bonn 1949, Florence 1865, Rome 1871, Athens 1834, Ankara 1923 and many small German moves such as Dresden 1547 and Mannheim 1720|Europe, where the record is densest.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Still moving: Nusantara</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The move everyone asks about is Indonesia's, from Jakarta to Nusantara in East Kalimantan, {{planned.0.km|int}} km away. As of 2026 it has not happened. A 2022 law names Nusantara as the capital, but the transfer takes effect only when the president signs a decree, and none has been signed. In May 2026 Indonesia's Constitutional Court confirmed that Jakarta remains the capital until then; the government's stated aim is to make Nusantara a "political capital" by 2028. On the map it is a dotted grey arc, drawn but not counted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I took every capital statement in Wikidata for countries, sovereign states, historical countries, kingdoms, empires and republics, with its start and end years: {{raw.statements|int}} statements for {{raw.states|int}} states, of which only {{raw.dated_pct|f1}}% have a date. A move is read where one capital's time ends and another's begins within two years, or where only one side is dated and the other city runs on; joint capitals, renamings (Edo to Tokyo, Constantinople to Istanbul) and states with no dates at all are left out, and the same move on several items is counted once. That gave {{raw.auto_moves|int}} candidate moves, which I then checked and corrected by hand as above. Distances are along the great circle between the two cities; distance from the sea is to the nearest ocean coast in Natural Earth. Every move has a confidence flag, and every hand edit its source. It is a map of what the record knows, richest for Europe, and not a complete history.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/moving-capitals/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23847842">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/moving-capitals">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><a href="https://www.wikidata.org/">Wikidata</a> capital (P36) statements with start and end times, CC0, via <a href="https://qlever.cs.uni-freiburg.de/wikidata">QLever</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Hand checks, corrections and additions, each with its source (mostly English Wikipedia articles), in <a href="https://maps.tristanhotham.com/moving-capitals/data/manual_edits.csv">the edits file</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Equatorial Guinea: <a href="https://www.africanews.com/2026/01/05/equatorial-guinea-relocates-capital/">africanews</a>. Nusantara: <a href="https://www.thestar.com.my/aseanplus/aseanplus-news/2026/05/15/court-ruling-raises-further-questions-over-future-of-indonesia039s-nusantara">The Star</a> and <a href="https://www.thejakartapost.com/indonesia/2026/05/15/court-ruling-raises-further-questions-over-nusantaras-future.html">The Jakarta Post</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://www.naturalearthdata.com/">Natural Earth</a> countries, land and places (public domain).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

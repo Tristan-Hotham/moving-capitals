@@ -1,0 +1,2008 @@
+{
+ "retrieved": "2026",
+ "first_year": 1500,
+ "last_year": 2026,
+ "raw": {
+  "states": 2295,
+  "statements": 2978,
+  "states_since_1500": 1652,
+  "statements_dated": 634,
+  "unknown_value": 4,
+  "deprecated": 15,
+  "undated_multi": 87,
+  "auto_moves": 202,
+  "dated_pct": 21.3,
+  "sovereign_now": 197,
+  "sovereign_one_capital": 159,
+  "sovereign_one_capital_pct": 81
+ },
+ "edits": {
+  "n": 115,
+  "drop": 45,
+  "fix": 5,
+  "add": 42,
+  "check": 22,
+  "merge": 1,
+  "label": 29,
+  "same_pairs": 14,
+  "rows": 158,
+  "same_place_rows": 9
+ },
+ "n": 184,
+ "n_lasting": 136,
+ "n_temp": 48,
+ "n_states": 114,
+ "n_countries": 66,
+ "conf": {
+  "checked": 69,
+  "high": 111,
+  "medium": 4,
+  "low": 0
+ },
+ "basis": {
+  "wikidata": 115,
+  "wikidata, checked": 22,
+  "added by hand": 42,
+  "wikidata, corrected": 5
+ },
+ "n_added": 42,
+ "n_from_wikidata": 142,
+ "by_century": [
+  {
+   "c": 1500,
+   "name": "16th century",
+   "col": "#9C6B30",
+   "n": 26,
+   "lasting": 22,
+   "temp": 4,
+   "added": 1,
+   "median_km": 156
+  },
+  {
+   "c": 1600,
+   "name": "17th century",
+   "col": "#C2452D",
+   "n": 16,
+   "lasting": 14,
+   "temp": 2,
+   "added": 1,
+   "median_km": 75
+  },
+  {
+   "c": 1700,
+   "name": "18th century",
+   "col": "#8E2F6B",
+   "n": 37,
+   "lasting": 24,
+   "temp": 13,
+   "added": 9,
+   "median_km": 133
+  },
+  {
+   "c": 1800,
+   "name": "19th century",
+   "col": "#2F5DA8",
+   "n": 42,
+   "lasting": 28,
+   "temp": 14,
+   "added": 11,
+   "median_km": 205
+  },
+  {
+   "c": 1900,
+   "name": "20th century",
+   "col": "#1E8C88",
+   "n": 59,
+   "lasting": 44,
+   "temp": 15,
+   "added": 20,
+   "median_km": 309
+  },
+  {
+   "c": 2000,
+   "name": "21st century",
+   "col": "#D49A00",
+   "n": 4,
+   "lasting": 4,
+   "temp": 0,
+   "added": 0,
+   "median_km": 196
+  }
+ ],
+ "top_century": {
+  "name": "20th century",
+  "n": 59,
+  "lasting": 44
+ },
+ "c20": {
+  "c": 1900,
+  "name": "20th century",
+  "col": "#1E8C88",
+  "n": 59,
+  "lasting": 44,
+  "temp": 15,
+  "added": 20,
+  "median_km": 309
+ },
+ "c21": {
+  "c": 2000,
+  "name": "21st century",
+  "col": "#D49A00",
+  "n": 4,
+  "lasting": 4,
+  "temp": 0,
+  "added": 0,
+  "median_km": 196
+ },
+ "by_decade": [
+  {
+   "d": 1500,
+   "n": 1,
+   "lasting": 1
+  },
+  {
+   "d": 1510,
+   "n": 1,
+   "lasting": 0
+  },
+  {
+   "d": 1520,
+   "n": 1,
+   "lasting": 0
+  },
+  {
+   "d": 1530,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1540,
+   "n": 4,
+   "lasting": 4
+  },
+  {
+   "d": 1550,
+   "n": 1,
+   "lasting": 1
+  },
+  {
+   "d": 1560,
+   "n": 7,
+   "lasting": 7
+  },
+  {
+   "d": 1570,
+   "n": 1,
+   "lasting": 1
+  },
+  {
+   "d": 1580,
+   "n": 3,
+   "lasting": 1
+  },
+  {
+   "d": 1590,
+   "n": 5,
+   "lasting": 5
+  },
+  {
+   "d": 1600,
+   "n": 4,
+   "lasting": 2
+  },
+  {
+   "d": 1610,
+   "n": 4,
+   "lasting": 4
+  },
+  {
+   "d": 1620,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1630,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1640,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1650,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1660,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1670,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1680,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1690,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1700,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1710,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1720,
+   "n": 6,
+   "lasting": 5
+  },
+  {
+   "d": 1730,
+   "n": 3,
+   "lasting": 2
+  },
+  {
+   "d": 1740,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1750,
+   "n": 0,
+   "lasting": 0
+  },
+  {
+   "d": 1760,
+   "n": 3,
+   "lasting": 3
+  },
+  {
+   "d": 1770,
+   "n": 6,
+   "lasting": 1
+  },
+  {
+   "d": 1780,
+   "n": 9,
+   "lasting": 5
+  },
+  {
+   "d": 1790,
+   "n": 8,
+   "lasting": 6
+  },
+  {
+   "d": 1800,
+   "n": 6,
+   "lasting": 2
+  },
+  {
+   "d": 1810,
+   "n": 4,
+   "lasting": 2
+  },
+  {
+   "d": 1820,
+   "n": 4,
+   "lasting": 2
+  },
+  {
+   "d": 1830,
+   "n": 4,
+   "lasting": 3
+  },
+  {
+   "d": 1840,
+   "n": 4,
+   "lasting": 4
+  },
+  {
+   "d": 1850,
+   "n": 4,
+   "lasting": 2
+  },
+  {
+   "d": 1860,
+   "n": 5,
+   "lasting": 4
+  },
+  {
+   "d": 1870,
+   "n": 5,
+   "lasting": 3
+  },
+  {
+   "d": 1880,
+   "n": 4,
+   "lasting": 4
+  },
+  {
+   "d": 1890,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1900,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 1910,
+   "n": 10,
+   "lasting": 8
+  },
+  {
+   "d": 1920,
+   "n": 8,
+   "lasting": 8
+  },
+  {
+   "d": 1930,
+   "n": 6,
+   "lasting": 5
+  },
+  {
+   "d": 1940,
+   "n": 18,
+   "lasting": 7
+  },
+  {
+   "d": 1950,
+   "n": 2,
+   "lasting": 1
+  },
+  {
+   "d": 1960,
+   "n": 3,
+   "lasting": 3
+  },
+  {
+   "d": 1970,
+   "n": 3,
+   "lasting": 3
+  },
+  {
+   "d": 1980,
+   "n": 3,
+   "lasting": 3
+  },
+  {
+   "d": 1990,
+   "n": 4,
+   "lasting": 4
+  },
+  {
+   "d": 2000,
+   "n": 2,
+   "lasting": 2
+  },
+  {
+   "d": 2010,
+   "n": 1,
+   "lasting": 1
+  },
+  {
+   "d": 2020,
+   "n": 1,
+   "lasting": 1
+  }
+ ],
+ "busiest_decade": {
+  "d": 1940,
+  "n": 18,
+  "lasting": 7
+ },
+ "busiest_year": {
+  "y": 1949,
+  "n": 5
+ },
+ "longest": [
+  {
+   "id": "m083",
+   "state": "Kingdom of Portugal",
+   "country": "Portugal",
+   "from": "Lisbon",
+   "to": "Rio de Janeiro",
+   "year": 1808,
+   "km": 7716,
+   "kind": "temporary",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m097",
+   "state": "Omani Empire",
+   "country": "Oman",
+   "from": "Muscat",
+   "to": "Zanzibar (Stone Town)",
+   "year": 1840,
+   "km": 3924,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m164",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Chengdu",
+   "to": "Taipei",
+   "year": 1949,
+   "km": 1828,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  {
+   "id": "m157",
+   "state": "Indonesia",
+   "country": "Indonesia",
+   "from": "Yogyakarta",
+   "to": "Bukittinggi",
+   "year": 1948,
+   "km": 1388,
+   "kind": "temporary",
+   "direction": "north-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m123",
+   "state": "British Raj",
+   "country": "India",
+   "from": "Calcutta (Kolkata)",
+   "to": "Delhi (New Delhi from 1931)",
+   "year": 1911,
+   "km": 1305,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m001",
+   "state": "Kazakh Khanate",
+   "country": "Kazakhstan",
+   "from": "Sighnaq",
+   "to": "Saray-Jük",
+   "year": 1511,
+   "km": 1235,
+   "kind": "temporary",
+   "direction": "north-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m002",
+   "state": "Kazakh Khanate",
+   "country": "Kazakhstan",
+   "from": "Saray-Jük",
+   "to": "Sighnaq",
+   "year": 1521,
+   "km": 1235,
+   "kind": "temporary",
+   "direction": "east",
+   "confidence": "high"
+  },
+  {
+   "id": "m053",
+   "state": "State of Brazil",
+   "country": "Brazil",
+   "from": "Salvador",
+   "to": "Rio de Janeiro",
+   "year": 1763,
+   "km": 1211,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m144",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Nanjing",
+   "to": "Chongqing",
+   "year": 1937,
+   "km": 1200,
+   "kind": "temporary",
+   "direction": "west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m156",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Chongqing",
+   "to": "Nanjing",
+   "year": 1946,
+   "km": 1200,
+   "kind": "temporary",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  {
+   "id": "m166",
+   "state": "Pakistan",
+   "country": "Pakistan",
+   "from": "Karachi",
+   "to": "Rawalpindi",
+   "year": 1959,
+   "km": 1135,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  {
+   "id": "m161",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Nanjing",
+   "to": "Guangzhou",
+   "year": 1949,
+   "km": 1132,
+   "kind": "temporary",
+   "direction": "south-west",
+   "confidence": "checked"
+  }
+ ],
+ "longest_lasting": [
+  {
+   "id": "m097",
+   "state": "Omani Empire",
+   "country": "Oman",
+   "from": "Muscat",
+   "to": "Zanzibar (Stone Town)",
+   "year": 1840,
+   "km": 3924,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m164",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Chengdu",
+   "to": "Taipei",
+   "year": 1949,
+   "km": 1828,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  {
+   "id": "m123",
+   "state": "British Raj",
+   "country": "India",
+   "from": "Calcutta (Kolkata)",
+   "to": "Delhi (New Delhi from 1931)",
+   "year": 1911,
+   "km": 1305,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m053",
+   "state": "State of Brazil",
+   "country": "Brazil",
+   "from": "Salvador",
+   "to": "Rio de Janeiro",
+   "year": 1763,
+   "km": 1211,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m166",
+   "state": "Pakistan",
+   "country": "Pakistan",
+   "from": "Karachi",
+   "to": "Rawalpindi",
+   "year": 1959,
+   "km": 1135,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  {
+   "id": "m129",
+   "state": "Russian State",
+   "country": "Russia",
+   "from": "Ufa",
+   "to": "Omsk",
+   "year": 1918,
+   "km": 1114,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "high"
+  },
+  {
+   "id": "m179",
+   "state": "Kazakhstan",
+   "country": "Kazakhstan",
+   "from": "Almaty",
+   "to": "Astana",
+   "year": 1997,
+   "km": 970,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m167",
+   "state": "Brazil",
+   "country": "Brazil",
+   "from": "Rio de Janeiro",
+   "to": "Brasília",
+   "year": 1960,
+   "km": 931,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  {
+   "id": "m124",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Nanjing",
+   "to": "Beijing",
+   "year": 1912,
+   "km": 898,
+   "kind": "lasting",
+   "direction": "north",
+   "confidence": "checked"
+  },
+  {
+   "id": "m140",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Beijing",
+   "to": "Nanjing",
+   "year": 1928,
+   "km": 898,
+   "kind": "lasting",
+   "direction": "south",
+   "confidence": "checked"
+  },
+  {
+   "id": "m044",
+   "state": "Kingdom of Sardinia",
+   "country": "Italy",
+   "from": "Cagliari",
+   "to": "Turin",
+   "year": 1720,
+   "km": 663,
+   "kind": "lasting",
+   "direction": "north",
+   "confidence": "high"
+  },
+  {
+   "id": "m042",
+   "state": "Russian State",
+   "country": "Russia",
+   "from": "Moscow",
+   "to": "St Petersburg",
+   "year": 1712,
+   "km": 635,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "high"
+  }
+ ],
+ "shortest_lasting": [
+  {
+   "id": "m062",
+   "state": "Siam",
+   "country": "Thailand",
+   "from": "Thon Buri",
+   "to": "Bangkok",
+   "year": 1782,
+   "km": 4,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "high"
+  },
+  {
+   "id": "m135",
+   "state": "Bahrain and its Dependencies",
+   "country": "Bahrain",
+   "from": "Al-Muharraq",
+   "to": "Manama",
+   "year": 1921,
+   "km": 5,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m043",
+   "state": "Margraviate of Baden-Durlach",
+   "country": "Germany",
+   "from": "Durlach",
+   "to": "Karlsruhe",
+   "year": 1715,
+   "km": 5,
+   "kind": "lasting",
+   "direction": "west",
+   "confidence": "high"
+  },
+  {
+   "id": "m175",
+   "state": "Federated States of Micronesia",
+   "country": "Federated States of Micronesia",
+   "from": "Kolonia",
+   "to": "Palikir",
+   "year": 1989,
+   "km": 6,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "high"
+  },
+  {
+   "id": "m032",
+   "state": "Mataram Sultanate",
+   "country": "Indonesia",
+   "from": "Kotagede",
+   "to": "Kerto",
+   "year": 1613,
+   "km": 6,
+   "kind": "lasting",
+   "direction": "south",
+   "confidence": "high"
+  }
+ ],
+ "median_km": 201,
+ "median_km_lasting": 177,
+ "mean_km_lasting": 288,
+ "over_500_lasting": 21,
+ "under_100_lasting": 49,
+ "under_100_lasting_pct": 36,
+ "over_1000": 14,
+ "lisbon_rio": {
+  "km": 7716,
+  "year": 1808,
+  "ratio_second": 2.0
+ },
+ "km_bins": [
+  {
+   "a": 0,
+   "b": 50,
+   "n": 37,
+   "lasting": 32
+  },
+  {
+   "a": 50,
+   "b": 100,
+   "n": 20,
+   "lasting": 17
+  },
+  {
+   "a": 100,
+   "b": 250,
+   "n": 50,
+   "lasting": 37
+  },
+  {
+   "a": 250,
+   "b": 500,
+   "n": 37,
+   "lasting": 29
+  },
+  {
+   "a": 500,
+   "b": 1000,
+   "n": 26,
+   "lasting": 15
+  },
+  {
+   "a": 1000,
+   "b": 2000,
+   "n": 11,
+   "lasting": 5
+  },
+  {
+   "a": 2000,
+   "b": 10000,
+   "n": 3,
+   "lasting": 1
+  }
+ ],
+ "direction": {
+  "north": 11,
+  "north-east": 15,
+  "east": 24,
+  "south-east": 21,
+  "south": 19,
+  "south-west": 12,
+  "west": 18,
+  "north-west": 16
+ },
+ "sea": {
+  "modern_n": 48,
+  "inland_n": 13,
+  "inland_pct": 27,
+  "seaward_n": 1,
+  "inland": [
+   {
+    "id": "m123",
+    "state": "British Raj",
+    "country": "India",
+    "from": "Calcutta (Kolkata)",
+    "to": "Delhi (New Delhi from 1931)",
+    "year": 1911,
+    "km": 1305,
+    "kind": "lasting",
+    "direction": "north-west",
+    "confidence": "checked",
+    "from_coast": 49,
+    "to_coast": 836
+   },
+   {
+    "id": "m125",
+    "state": "Kamerun",
+    "country": "Cameroon",
+    "from": "Buea",
+    "to": "Yaoundé",
+    "year": 1914,
+    "km": 256,
+    "kind": "lasting",
+    "direction": "east",
+    "confidence": "high",
+    "from_coast": 19,
+    "to_coast": 191
+   },
+   {
+    "id": "m132",
+    "state": "Russian Socialist Federative Soviet Republic",
+    "country": "Russia",
+    "from": "St Petersburg",
+    "to": "Moscow",
+    "year": 1918,
+    "km": 635,
+    "kind": "lasting",
+    "direction": "south-east",
+    "confidence": "checked",
+    "from_coast": 8,
+    "to_coast": 638
+   },
+   {
+    "id": "m136",
+    "state": "Republic of Turkey",
+    "country": "Turkey",
+    "from": "Istanbul",
+    "to": "Ankara",
+    "year": 1923,
+    "km": 349,
+    "kind": "lasting",
+    "direction": "east",
+    "confidence": "checked",
+    "from_coast": 0,
+    "to_coast": 185
+   },
+   {
+    "id": "m139",
+    "state": "Australia",
+    "country": "Australia",
+    "from": "Melbourne",
+    "to": "Canberra",
+    "year": 1927,
+    "km": 466,
+    "kind": "lasting",
+    "direction": "north-east",
+    "confidence": "checked",
+    "from_coast": 11,
+    "to_coast": 114
+   },
+   {
+    "id": "m150",
+    "state": "British Somaliland",
+    "country": "Somaliland",
+    "from": "Berbera",
+    "to": "Hargeisa",
+    "year": 1941,
+    "km": 143,
+    "kind": "lasting",
+    "direction": "south-west",
+    "confidence": "high",
+    "from_coast": 8,
+    "to_coast": 103
+   },
+   {
+    "id": "m166",
+    "state": "Pakistan",
+    "country": "Pakistan",
+    "from": "Karachi",
+    "to": "Rawalpindi",
+    "year": 1959,
+    "km": 1135,
+    "kind": "lasting",
+    "direction": "north-east",
+    "confidence": "checked",
+    "from_coast": 12,
+    "to_coast": 1099
+   },
+   {
+    "id": "m167",
+    "state": "Brazil",
+    "country": "Brazil",
+    "from": "Rio de Janeiro",
+    "to": "Brasília",
+    "year": 1960,
+    "km": 931,
+    "kind": "lasting",
+    "direction": "north-west",
+    "confidence": "checked",
+    "from_coast": 3,
+    "to_coast": 876
+   },
+   {
+    "id": "m174",
+    "state": "Ivory Coast",
+    "country": "Ivory Coast",
+    "from": "Abidjan",
+    "to": "Yamoussoukro",
+    "year": 1983,
+    "km": 215,
+    "kind": "lasting",
+    "direction": "north-west",
+    "confidence": "checked",
+    "from_coast": 7,
+    "to_coast": 179
+   },
+   {
+    "id": "m177",
+    "state": "Nigeria",
+    "country": "Nigeria",
+    "from": "Lagos",
+    "to": "Abuja",
+    "year": 1991,
+    "km": 536,
+    "kind": "lasting",
+    "direction": "north-east",
+    "confidence": "checked",
+    "from_coast": 7,
+    "to_coast": 442
+   },
+   {
+    "id": "m178",
+    "state": "Tanzania",
+    "country": "Tanzania",
+    "from": "Dar es Salaam",
+    "to": "Dodoma",
+    "year": 1996,
+    "km": 397,
+    "kind": "lasting",
+    "direction": "west",
+    "confidence": "checked",
+    "from_coast": 1,
+    "to_coast": 338
+   },
+   {
+    "id": "m180",
+    "state": "Myanmar",
+    "country": "Myanmar",
+    "from": "Yangon",
+    "to": "Naypyidaw",
+    "year": 2005,
+    "km": 328,
+    "kind": "lasting",
+    "direction": "north",
+    "confidence": "checked",
+    "from_coast": 4,
+    "to_coast": 223
+   },
+   {
+    "id": "m183",
+    "state": "Equatorial Guinea",
+    "country": "Equatorial Guinea",
+    "from": "Malabo",
+    "to": "Ciudad de la Paz",
+    "year": 2026,
+    "km": 331,
+    "kind": "lasting",
+    "direction": "south-east",
+    "confidence": "checked",
+    "from_coast": 2,
+    "to_coast": 119
+   }
+  ],
+  "seaward": [
+   {
+    "id": "m164",
+    "state": "Republic of China",
+    "country": "China",
+    "from": "Chengdu",
+    "to": "Taipei",
+    "year": 1949,
+    "km": 1828,
+    "kind": "lasting",
+    "direction": "east",
+    "confidence": "checked"
+   }
+  ],
+  "early_n": 88,
+  "early_inland_n": 7,
+  "early_inland_pct": 8
+ },
+ "centre": {
+  "n": 45,
+  "closer": 25,
+  "further": 11,
+  "closer_pct": 56,
+  "brasilia": 916,
+  "abuja": 535
+ },
+ "countries": [
+  {
+   "name": "United States",
+   "n": 17,
+   "lasting": 5,
+   "states": 3
+  },
+  {
+   "name": "Germany",
+   "n": 12,
+   "lasting": 12,
+   "states": 8
+  },
+  {
+   "name": "India",
+   "n": 10,
+   "lasting": 8,
+   "states": 8
+  },
+  {
+   "name": "China",
+   "n": 10,
+   "lasting": 4,
+   "states": 3
+  },
+  {
+   "name": "Russia",
+   "n": 9,
+   "lasting": 7,
+   "states": 7
+  },
+  {
+   "name": "France",
+   "n": 9,
+   "lasting": 3,
+   "states": 3
+  },
+  {
+   "name": "Italy",
+   "n": 7,
+   "lasting": 5,
+   "states": 5
+  },
+  {
+   "name": "Romania",
+   "n": 6,
+   "lasting": 4,
+   "states": 4
+  },
+  {
+   "name": "Canada",
+   "n": 6,
+   "lasting": 3,
+   "states": 1
+  },
+  {
+   "name": "Myanmar",
+   "n": 5,
+   "lasting": 5,
+   "states": 3
+  },
+  {
+   "name": "Kazakhstan",
+   "n": 5,
+   "lasting": 3,
+   "states": 2
+  },
+  {
+   "name": "Spain",
+   "n": 5,
+   "lasting": 3,
+   "states": 3
+  },
+  {
+   "name": "Indonesia",
+   "n": 5,
+   "lasting": 2,
+   "states": 2
+  },
+  {
+   "name": "Lithuania",
+   "n": 4,
+   "lasting": 1,
+   "states": 2
+  },
+  {
+   "name": "Ivory Coast",
+   "n": 3,
+   "lasting": 3,
+   "states": 2
+  }
+ ],
+ "states_most": [
+  {
+   "name": "United States",
+   "q": "Q30",
+   "n": 11,
+   "lasting": 1
+  },
+  {
+   "name": "Republic of China",
+   "q": "Q13426199",
+   "n": 8,
+   "lasting": 3
+  },
+  {
+   "name": "France",
+   "q": "Q142",
+   "n": 7,
+   "lasting": 1
+  },
+  {
+   "name": "Province of Canada",
+   "q": "Province of Canada",
+   "n": 6,
+   "lasting": 3
+  },
+  {
+   "name": "Kingdom of Hawaiʻi",
+   "q": "Q156418",
+   "n": 5,
+   "lasting": 3
+  },
+  {
+   "name": "Kazakh Khanate",
+   "q": "Q1433867",
+   "n": 4,
+   "lasting": 2
+  },
+  {
+   "name": "Spain",
+   "q": "Q29",
+   "n": 3,
+   "lasting": 1
+  },
+  {
+   "name": "Taungoo dynasty",
+   "q": "Q519718",
+   "n": 3,
+   "lasting": 3
+  },
+  {
+   "name": "Kingdom of Sardinia",
+   "q": "Q165154",
+   "n": 3,
+   "lasting": 1
+  },
+  {
+   "name": "Kingdom of Prussia",
+   "q": "Q27306",
+   "n": 3,
+   "lasting": 0
+  }
+ ],
+ "us": {
+  "n": 11,
+  "first": 1776,
+  "last": 1800,
+  "lasting": 1,
+  "cities": 9
+ },
+ "roc": {
+  "n": 8,
+  "y1949": 4
+ },
+ "canada": {
+  "n": 6
+ },
+ "germany": {
+  "n": 12,
+  "states": 8
+ },
+ "n_countries_two_plus": 35,
+ "purpose_built": [
+  {
+   "to": "Hyderabad",
+   "state": "Golconda Sultanate",
+   "country": "India",
+   "year": 1591,
+   "founded": 1591,
+   "km": 8,
+   "note": "Founded in 1591 by Muhammad Quli Qutb Shah beside the fort of Golconda.",
+   "id": "m021",
+   "from_coast": 274,
+   "to_coast": 267
+  },
+  {
+   "to": "Versailles",
+   "state": "Kingdom of France",
+   "country": "France",
+   "year": 1682,
+   "founded": 1661,
+   "km": 17,
+   "note": "A palace town built up around Louis XIV's palace from the 1660s.",
+   "id": "m039",
+   "from_coast": 150,
+   "to_coast": 144
+  },
+  {
+   "to": "St Petersburg",
+   "state": "Russian State",
+   "country": "Russia",
+   "year": 1712,
+   "founded": 1703,
+   "km": 635,
+   "note": "Founded by Peter the Great in 1703 on the Neva delta.",
+   "id": "m042",
+   "from_coast": 638,
+   "to_coast": 8
+  },
+  {
+   "to": "Karlsruhe",
+   "state": "Margraviate of Baden-Durlach",
+   "country": "Germany",
+   "year": 1715,
+   "founded": 1715,
+   "km": 5,
+   "note": "Laid out in 1715 as a fan of streets around the margrave's new palace.",
+   "id": "m043",
+   "from_coast": 402,
+   "to_coast": 397
+  },
+  {
+   "to": "Washington",
+   "state": "United States",
+   "country": "United States",
+   "year": 1800,
+   "founded": 1791,
+   "km": 199,
+   "note": "Site chosen in 1790, planned by Pierre L'Enfant from 1791.",
+   "id": "m079",
+   "from_coast": 6,
+   "to_coast": 1
+  },
+  {
+   "to": "Delhi (New Delhi from 1931)",
+   "state": "British Raj",
+   "country": "India",
+   "year": 1911,
+   "founded": 1911,
+   "km": 1305,
+   "note": "Designed by Edwin Lutyens and Herbert Baker beside the old city of Delhi; inaugurated in 1931.",
+   "id": "m123",
+   "from_coast": 49,
+   "to_coast": 836
+  },
+  {
+   "to": "Canberra",
+   "state": "Australia",
+   "country": "Australia",
+   "year": 1927,
+   "founded": 1913,
+   "km": 466,
+   "note": "Designed by Walter Burley Griffin and Marion Mahony Griffin; building began in 1913.",
+   "id": "m139",
+   "from_coast": 11,
+   "to_coast": 114
+  },
+  {
+   "to": "Quezon City",
+   "state": "Philippines",
+   "country": "Philippines",
+   "year": 1948,
+   "founded": 1939,
+   "km": 8,
+   "note": "Planned in 1939 by President Manuel Quezon as a new capital.",
+   "id": "m159",
+   "from_coast": 5,
+   "to_coast": 10
+  },
+  {
+   "to": "Brasília",
+   "state": "Brazil",
+   "country": "Brazil",
+   "year": 1960,
+   "founded": 1956,
+   "km": 931,
+   "note": "Planned by Lúcio Costa and Oscar Niemeyer, built from 1956 in about four years.",
+   "id": "m167",
+   "from_coast": 3,
+   "to_coast": 876
+  },
+  {
+   "to": "Gaborone",
+   "state": "Bechuanaland Protectorate",
+   "country": "Botswana",
+   "year": 1965,
+   "founded": 1964,
+   "km": 137,
+   "note": "Built from 1964 as the capital of the soon to be independent Botswana.",
+   "id": "m168",
+   "from_coast": 683,
+   "to_coast": 688
+  },
+  {
+   "to": "Islamabad",
+   "state": "Pakistan",
+   "country": "Pakistan",
+   "year": 1967,
+   "founded": 1961,
+   "km": 11,
+   "note": "Master plan by Constantinos Doxiadis; built from 1961.",
+   "id": "m169",
+   "from_coast": 1099,
+   "to_coast": 1106
+  },
+  {
+   "to": "Belmopan",
+   "state": "British Honduras (Belize)",
+   "country": "Belize",
+   "year": 1970,
+   "founded": 1967,
+   "km": 67,
+   "note": "Built inland from 1967 after Hurricane Hattie.",
+   "id": "m170",
+   "from_coast": 3,
+   "to_coast": 51
+  },
+  {
+   "to": "Palikir",
+   "state": "Federated States of Micronesia",
+   "country": "Federated States of Micronesia",
+   "year": 1989,
+   "founded": 1980,
+   "km": 6,
+   "note": "Purpose-built government centre on Pohnpei.",
+   "id": "m175",
+   "from_coast": 3,
+   "to_coast": 5
+  },
+  {
+   "to": "Abuja",
+   "state": "Nigeria",
+   "country": "Nigeria",
+   "year": 1991,
+   "founded": 1976,
+   "km": 536,
+   "note": "Chosen in 1976 for its central, neutral position; master plan from 1979.",
+   "id": "m177",
+   "from_coast": 7,
+   "to_coast": 442
+  },
+  {
+   "to": "Naypyidaw",
+   "state": "Myanmar",
+   "country": "Myanmar",
+   "year": 2005,
+   "founded": 2002,
+   "km": 328,
+   "note": "Built in secret from about 2002 on farmland near Pyinmana.",
+   "id": "m180",
+   "from_coast": 4,
+   "to_coast": 223
+  },
+  {
+   "to": "Ngerulmud",
+   "state": "Palau",
+   "country": "Palau",
+   "year": 2006,
+   "founded": 2006,
+   "km": 24,
+   "note": "A capitol building on Babeldaob opened in 2006, with almost no town around it.",
+   "id": "m181",
+   "from_coast": 6,
+   "to_coast": 1
+  },
+  {
+   "to": "Ciudad de la Paz",
+   "state": "Equatorial Guinea",
+   "country": "Equatorial Guinea",
+   "year": 2026,
+   "founded": 2000,
+   "km": 331,
+   "note": "Planned new city on the mainland, formerly Oyala, under construction since the 2000s.",
+   "id": "m183",
+   "from_coast": 2,
+   "to_coast": 119
+  }
+ ],
+ "n_purpose_built": 17,
+ "n_pb_since_1900": 12,
+ "pb_since_1900_share": 25,
+ "pb_inland_since_1900": 6,
+ "famous": [
+  {
+   "id": "m167",
+   "from": "Rio de Janeiro",
+   "to": "Brasília",
+   "year": 1960,
+   "state": "Brazil",
+   "km": 931,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Brasília"
+  },
+  {
+   "id": "m123",
+   "from": "Calcutta (Kolkata)",
+   "to": "Delhi (New Delhi from 1931)",
+   "year": 1911,
+   "state": "British Raj",
+   "km": 1305,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/New_Delhi"
+  },
+  {
+   "id": "m048",
+   "from": "St Petersburg",
+   "to": "Moscow",
+   "year": 1728,
+   "state": "Russian Empire",
+   "km": 635,
+   "status": "in Wikidata, checked",
+   "source": ""
+  },
+  {
+   "id": "m132",
+   "from": "St Petersburg",
+   "to": "Moscow",
+   "year": 1918,
+   "state": "Russian Socialist Federative Soviet Republic",
+   "km": 635,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Moscow"
+  },
+  {
+   "id": "m136",
+   "from": "Istanbul",
+   "to": "Ankara",
+   "year": 1923,
+   "state": "Republic of Turkey",
+   "km": 349,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Ankara"
+  },
+  {
+   "id": "m177",
+   "from": "Lagos",
+   "to": "Abuja",
+   "year": 1991,
+   "state": "Nigeria",
+   "km": 536,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Abuja"
+  },
+  {
+   "id": "m166",
+   "from": "Karachi",
+   "to": "Rawalpindi",
+   "year": 1959,
+   "state": "Pakistan",
+   "km": 1135,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Islamabad"
+  },
+  {
+   "id": "m169",
+   "from": "Rawalpindi",
+   "to": "Islamabad",
+   "year": 1967,
+   "state": "Pakistan",
+   "km": 11,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Islamabad"
+  },
+  {
+   "id": "m179",
+   "from": "Almaty",
+   "to": "Astana",
+   "year": 1997,
+   "state": "Kazakhstan",
+   "km": 970,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Astana"
+  },
+  {
+   "id": "m180",
+   "from": "Yangon",
+   "to": "Naypyidaw",
+   "year": 2005,
+   "state": "Myanmar",
+   "km": 328,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Naypyidaw"
+  },
+  {
+   "id": "m178",
+   "from": "Dar es Salaam",
+   "to": "Dodoma",
+   "year": 1996,
+   "state": "Tanzania",
+   "km": 397,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Dodoma"
+  },
+  {
+   "id": "m174",
+   "from": "Abidjan",
+   "to": "Yamoussoukro",
+   "year": 1983,
+   "state": "Ivory Coast",
+   "km": 215,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Yamoussoukro"
+  },
+  {
+   "id": "m160",
+   "from": "Berlin",
+   "to": "Bonn",
+   "year": 1949,
+   "state": "Germany",
+   "km": 476,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Bonn"
+  },
+  {
+   "id": "m176",
+   "from": "Bonn",
+   "to": "Berlin",
+   "year": 1990,
+   "state": "Germany",
+   "km": 476,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Berlin/Bonn_Act"
+  },
+  {
+   "id": "m139",
+   "from": "Melbourne",
+   "to": "Canberra",
+   "year": 1927,
+   "state": "Australia",
+   "km": 466,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Canberra"
+  },
+  {
+   "id": "m109",
+   "from": "Kyoto (Heian-kyō)",
+   "to": "Tokyo",
+   "year": 1868,
+   "state": "Japan",
+   "km": 364,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Tokyo"
+  },
+  {
+   "id": "m083",
+   "from": "Lisbon",
+   "to": "Rio de Janeiro",
+   "year": 1808,
+   "state": "Kingdom of Portugal",
+   "km": 7716,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil"
+  },
+  {
+   "id": "m090",
+   "from": "Rio de Janeiro",
+   "to": "Lisbon",
+   "year": 1821,
+   "state": "Portuguese Empire",
+   "km": 7716,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Transfer_of_the_Portuguese_court_to_Brazil"
+  },
+  {
+   "id": "m071",
+   "from": "New York",
+   "to": "Philadelphia",
+   "year": 1790,
+   "state": "United States",
+   "km": 130,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States"
+  },
+  {
+   "id": "m079",
+   "from": "Philadelphia",
+   "to": "Washington",
+   "year": 1800,
+   "state": "United States",
+   "km": 199,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States"
+  },
+  {
+   "id": "m108",
+   "from": "Quebec City",
+   "to": "Ottawa",
+   "year": 1866,
+   "state": "Province of Canada",
+   "km": 379,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Canadian_seat_of_government_dispute"
+  },
+  {
+   "id": "m140",
+   "from": "Beijing",
+   "to": "Nanjing",
+   "year": 1928,
+   "state": "Republic of China",
+   "km": 898,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China"
+  },
+  {
+   "id": "m124",
+   "from": "Nanjing",
+   "to": "Beijing",
+   "year": 1912,
+   "state": "Republic of China",
+   "km": 898,
+   "status": "added by hand",
+   "source": "https://en.wikipedia.org/wiki/Capital_of_the_Republic_of_China"
+  },
+  {
+   "id": "m037",
+   "from": "Mukden (Shenyang)",
+   "to": "Beijing",
+   "year": 1644,
+   "state": "Qing dynasty",
+   "km": 627,
+   "status": "in Wikidata, checked",
+   "source": "https://en.wikipedia.org/wiki/Shenyang"
+  }
+ ],
+ "famous_n": 24,
+ "famous_in_wd": 18,
+ "planned": [
+  {
+   "state": "Indonesia",
+   "from": "Jakarta",
+   "to": "Nusantara",
+   "km": 1240,
+   "status": "Not moved. A 2022 law names Nusantara, in East Kalimantan, as the new capital, but the move takes effect only when the president signs a decree, and none has been issued. In May 2026 the Constitutional Court confirmed that Jakarta remains the capital until then; the government's stated aim is to make Nusantara the 'political capital' by 2028. Wikidata marks Nusantara's capital statement as deprecated.",
+   "sources": [
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/05/15/court-ruling-raises-further-questions-over-future-of-indonesia039s-nusantara",
+    "https://www.thejakartapost.com/indonesia/2026/05/15/court-ruling-raises-further-questions-over-nusantaras-future.html",
+    "https://en.wikipedia.org/wiki/Nusantara_(city)"
+   ]
+  }
+ ],
+ "latest": {
+  "id": "m183",
+  "state": "Equatorial Guinea",
+  "country": "Equatorial Guinea",
+  "from": "Malabo",
+  "to": "Ciudad de la Paz",
+  "year": 2026,
+  "km": 331,
+  "kind": "lasting",
+  "direction": "south-east",
+  "confidence": "checked"
+ },
+ "first": {
+  "id": "m000",
+  "state": "Aq Qoyunlu",
+  "country": "Iraq",
+  "from": "Tabriz",
+  "to": "Baghdad",
+  "year": 1501,
+  "km": 557,
+  "kind": "lasting",
+  "direction": "south",
+  "confidence": "medium"
+ },
+ "ex": {
+  "brasilia": {
+   "id": "m167",
+   "state": "Brazil",
+   "country": "Brazil",
+   "from": "Rio de Janeiro",
+   "to": "Brasília",
+   "year": 1960,
+   "km": 931,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  "delhi": {
+   "id": "m123",
+   "state": "British Raj",
+   "country": "India",
+   "from": "Calcutta (Kolkata)",
+   "to": "Delhi (New Delhi from 1931)",
+   "year": 1911,
+   "km": 1305,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  "moscow": {
+   "id": "m048",
+   "state": "Russian Empire",
+   "country": "Russia",
+   "from": "St Petersburg",
+   "to": "Moscow",
+   "year": 1728,
+   "km": 635,
+   "kind": "temporary",
+   "direction": "south-east",
+   "confidence": "high"
+  },
+  "stp": {
+   "id": "m042",
+   "state": "Russian State",
+   "country": "Russia",
+   "from": "Moscow",
+   "to": "St Petersburg",
+   "year": 1712,
+   "km": 635,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "high"
+  },
+  "ankara": {
+   "id": "m136",
+   "state": "Republic of Turkey",
+   "country": "Turkey",
+   "from": "Istanbul",
+   "to": "Ankara",
+   "year": 1923,
+   "km": 349,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  "abuja": {
+   "id": "m177",
+   "state": "Nigeria",
+   "country": "Nigeria",
+   "from": "Lagos",
+   "to": "Abuja",
+   "year": 1991,
+   "km": 536,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  "astana": {
+   "id": "m179",
+   "state": "Kazakhstan",
+   "country": "Kazakhstan",
+   "from": "Almaty",
+   "to": "Astana",
+   "year": 1997,
+   "km": 970,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  "naypyidaw": {
+   "id": "m180",
+   "state": "Myanmar",
+   "country": "Myanmar",
+   "from": "Yangon",
+   "to": "Naypyidaw",
+   "year": 2005,
+   "km": 328,
+   "kind": "lasting",
+   "direction": "north",
+   "confidence": "checked"
+  },
+  "canberra": {
+   "id": "m139",
+   "state": "Australia",
+   "country": "Australia",
+   "from": "Melbourne",
+   "to": "Canberra",
+   "year": 1927,
+   "km": 466,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  "tokyo": {
+   "id": "m109",
+   "state": "Japan",
+   "country": "Japan",
+   "from": "Kyoto (Heian-kyō)",
+   "to": "Tokyo",
+   "year": 1868,
+   "km": 364,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  "zanzibar": {
+   "id": "m097",
+   "state": "Omani Empire",
+   "country": "Oman",
+   "from": "Muscat",
+   "to": "Zanzibar (Stone Town)",
+   "year": 1840,
+   "km": 3924,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  "taipei": {
+   "id": "m164",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Chengdu",
+   "to": "Taipei",
+   "year": 1949,
+   "km": 1828,
+   "kind": "lasting",
+   "direction": "east",
+   "confidence": "checked"
+  },
+  "islamabad": {
+   "id": "m169",
+   "state": "Pakistan",
+   "country": "Pakistan",
+   "from": "Rawalpindi",
+   "to": "Islamabad",
+   "year": 1967,
+   "km": 11,
+   "kind": "lasting",
+   "direction": "north",
+   "confidence": "checked"
+  },
+  "karachi": {
+   "id": "m166",
+   "state": "Pakistan",
+   "country": "Pakistan",
+   "from": "Karachi",
+   "to": "Rawalpindi",
+   "year": 1959,
+   "km": 1135,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  "dodoma": {
+   "id": "m178",
+   "state": "Tanzania",
+   "country": "Tanzania",
+   "from": "Dar es Salaam",
+   "to": "Dodoma",
+   "year": 1996,
+   "km": 397,
+   "kind": "lasting",
+   "direction": "west",
+   "confidence": "checked"
+  },
+  "yam": {
+   "id": "m174",
+   "state": "Ivory Coast",
+   "country": "Ivory Coast",
+   "from": "Abidjan",
+   "to": "Yamoussoukro",
+   "year": 1983,
+   "km": 215,
+   "kind": "lasting",
+   "direction": "north-west",
+   "confidence": "checked"
+  },
+  "bonn": {
+   "id": "m160",
+   "state": "Germany",
+   "country": "Germany",
+   "from": "Berlin",
+   "to": "Bonn",
+   "year": 1949,
+   "km": 476,
+   "kind": "lasting",
+   "direction": "west",
+   "confidence": "checked"
+  },
+  "berlin": {
+   "id": "m176",
+   "state": "Germany",
+   "country": "Germany",
+   "from": "Bonn",
+   "to": "Berlin",
+   "year": 1990,
+   "km": 476,
+   "kind": "lasting",
+   "direction": "north-east",
+   "confidence": "checked"
+  },
+  "washington": {
+   "id": "m079",
+   "state": "United States",
+   "country": "United States",
+   "from": "Philadelphia",
+   "to": "Washington",
+   "year": 1800,
+   "km": 199,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  "ottawa": {
+   "id": "m108",
+   "state": "Province of Canada",
+   "country": "Canada",
+   "from": "Quebec City",
+   "to": "Ottawa",
+   "year": 1866,
+   "km": 379,
+   "kind": "lasting",
+   "direction": "west",
+   "confidence": "checked"
+  },
+  "belmopan": {
+   "id": "m170",
+   "state": "British Honduras (Belize)",
+   "country": "Belize",
+   "from": "Belize City",
+   "to": "Belmopan",
+   "year": 1970,
+   "km": 67,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "checked"
+  },
+  "salvador": {
+   "id": "m053",
+   "state": "State of Brazil",
+   "country": "Brazil",
+   "from": "Salvador",
+   "to": "Rio de Janeiro",
+   "year": 1763,
+   "km": 1211,
+   "kind": "lasting",
+   "direction": "south-west",
+   "confidence": "high"
+  },
+  "nanjing": {
+   "id": "m140",
+   "state": "Republic of China",
+   "country": "China",
+   "from": "Beijing",
+   "to": "Nanjing",
+   "year": 1928,
+   "km": 898,
+   "kind": "lasting",
+   "direction": "south",
+   "confidence": "checked"
+  },
+  "mukden": {
+   "id": "m037",
+   "state": "Qing dynasty",
+   "country": "China",
+   "from": "Mukden (Shenyang)",
+   "to": "Beijing",
+   "year": 1644,
+   "km": 627,
+   "kind": "lasting",
+   "direction": "west",
+   "confidence": "checked"
+  }
+ },
+ "meta": {
+  "page": "https://maps.tristanhotham.com/moving-capitals/",
+  "repo": "https://github.com/Tristan-Hotham/moving-capitals",
+  "slug": "moving-capitals"
+ }
+}

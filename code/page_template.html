@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Capitals That Moved</title>
+<meta name="description" content="Every capital move since 1500 that Wikidata records, checked and corrected by hand: {{n|int}} moves, how far each went, which way, and the capitals built from scratch.">
+<meta property="og:title" content="Capitals that moved: every capital move since 1500 and how far it went">
+<meta property="og:description" content="{{n|int}} moves of a seat of government since 1500. The longest: Lisbon to Rio de Janeiro in 1808, {{lisbon_rio.km|int}} km across the Atlantic.">
+<meta property="og:image" content="https://maps.tristanhotham.com/moving-capitals/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/moving-capitals/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Removal van: brick, navy, gold on map paper. Century colours are set in the script. */
+:root{
+  --bg:#F7F3EA; --panel:#EEE8DA; --fg:#1E2430; --muted:#646875; --rule:#E2DACA; --card:#FFFCF5; --border:#D0C6B3;
+  --hot:#B8452A; --cool:#23408E; --gold:#C99A06; --land:#E9E2D2; --sea:#F2EFE8;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151820; --panel:#1F232C; --fg:#ECE8E0; --muted:#A3A6B1; --rule:#343944; --card:#1B1F27; --border:#454B57;
+  --hot:#E57A5F; --cool:#8EA6E6; --gold:#F0C24B; --land:#2A2E37; --sea:#181B22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151820; --panel:#1F232C; --fg:#ECE8E0; --muted:#A3A6B1; --rule:#343944; --card:#1B1F27; --border:#454B57;
+  --hot:#E57A5F; --cool:#8EA6E6; --gold:#F0C24B; --land:#2A2E37; --sea:#181B22; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:700px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1180px,calc(100vw - 32px));margin-left:calc((100% - min(1180px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--hot);color:#fff;padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(44px,11vw,96px)/.9 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .a{color:var(--hot)} h1 .b{color:var(--cool)}
+.mark{width:clamp(84px,17vw,150px);height:auto;display:block;color:var(--fg)}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:56ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:54px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(22px,4.4vw,32px)/1 var(--display);letter-spacing:-.01em}
+.stats b.h{color:var(--hot)} .stats b.c{color:var(--cool)} .stats b.g{color:var(--gold)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}.lab.t{font-size:10px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:290px;z-index:100001;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;align-items:center;margin:0 0 10px;flex-wrap:wrap}
+.scrollrow{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:2px;max-width:100%}
+.scrollrow .btn{flex:0 0 auto;white-space:nowrap}
+.ctl-l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px;flex:0 0 auto;align-self:center}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.btn.play{min-width:84px;background:var(--hot);border-color:var(--hot);color:#fff}
+.searchbox{position:relative;flex:1 1 260px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 11px;min-height:40px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:340px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+.timeline{display:flex;gap:10px;align-items:center;margin:4px 0 12px}
+.timeline input[type=range]{flex:1;accent-color:var(--hot);min-width:0;height:28px}
+.yearbig{font:900 30px/1 var(--display);min-width:3.4ch;text-align:right;letter-spacing:-.01em}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+.side{background:var(--card);border:1px solid var(--border);padding:12px 12px 10px;font:400 13px/1.45 var(--mono);max-height:680px;overflow:auto}
+@media (max-width:900px){.side{max-height:none}}
+.side h4{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.side h4:first-child{margin-top:2px}
+.side .big{font:800 24px/1.12 var(--display);margin:2px 0 6px}
+.side .sub{color:var(--muted);font-size:12px;margin:0 0 8px}
+.side table{width:100%;border-collapse:collapse;margin:4px 0 6px}
+.side td{padding:4px 4px 4px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.side td.num{text-align:right;white-space:nowrap}
+.side .why{background:var(--panel);border-left:4px solid var(--gold);padding:7px 9px;margin:8px 0;font-size:12px}
+.side .story{font:400 15px/1.5 var(--body);margin:8px 0}
+.go{cursor:pointer;text-decoration:underline;text-decoration-color:var(--border);text-underline-offset:3px}
+.back{font:400 12px var(--mono);background:none;border:0;color:var(--muted);padding:0;cursor:pointer;text-decoration:underline;margin-bottom:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px;border:1px solid rgba(0,0,0,.18)}
+.pill{display:inline-block;font:500 10.5px/1 var(--mono);padding:3px 6px;border-radius:999px;border:1px solid var(--border);margin:0 4px 4px 0;color:var(--fg);background:var(--bg)}
+.pill.c{border-color:var(--cool);color:var(--cool)} .pill.t{border-style:dashed}
+.lmap{height:640px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:600px){.lmap{height:min(62vh,470px)}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.yearlab{font:900 44px/1 var(--display);color:var(--fg);opacity:.85;text-shadow:0 0 6px var(--bg),0 0 3px var(--bg);pointer-events:none;letter-spacing:-.02em}
+@media (max-width:600px){.yearlab{font-size:28px;margin-bottom:30px!important}}
+.lyrBtn{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:250px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono);max-height:min(70vh,520px);overflow:auto}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%;min-height:0}
+.lyrPanel .sub{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px;margin-top:3px}
+.lyrPanel .sub span{flex:0 0 58px}
+.lyrPanel .hd{font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 7px;border-top:1px solid var(--rule);padding-top:9px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.cityL{font:500 11px/1 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.cityL i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--fg);margin-right:4px;vertical-align:1px}
+.cityL.s{font-size:10px;font-weight:400}
+.capL{font:600 11px/1.1 var(--mono);color:var(--fg);white-space:nowrap;pointer-events:none;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg),0 0 1px var(--bg)}
+.capL small{display:block;font-weight:400;color:var(--muted)}
+.pbIco{font:700 15px/1 var(--mono);color:var(--gold);text-shadow:0 0 2px #000,0 0 1px #000;pointer-events:none;text-align:center}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg)}
+.leaflet-popup-content{font:400 12.5px/1.45 var(--mono);margin:10px 12px}
+.leaflet-popup-content b{font-weight:500}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px;align-items:center}
+.legend button{font:400 12px/1.3 var(--mono);color:var(--fg);background:none;border:1px solid transparent;border-radius:3px;padding:3px 5px;cursor:pointer;display:inline-flex;align-items:center}
+.legend button[aria-pressed="false"]{opacity:.38;text-decoration:line-through}
+.legend i{display:inline-block;width:18px;height:4px;margin-right:6px;border-radius:2px}
+.legend .key{display:inline-flex;align-items:center;gap:5px}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.4 var(--mono);min-width:560px}
+table.t th{font-weight:500;text-align:left;border-bottom:2px solid var(--fg);padding:6px 6px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:6px 6px 6px 0;vertical-align:top}
+table.t td.num{text-align:right;white-space:nowrap}
+.st-add{color:var(--hot)} .st-cor{color:var(--gold)} .st-ok{color:var(--cool)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>History</span><span>World, 1500 to 2026</span></div>
+<header class="hero">
+  <h1>Capitals <span class="a">that</span> <span class="b">moved</span></h1>
+  <svg class="mark" viewBox="0 0 150 112" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Every time a state picked up its seat of government and put it down somewhere else since 1500, as far as the open record goes: from Moscow to a new city on the Neva, from Lisbon across the Atlantic to Rio de Janeiro, from Rio to a plateau where Brasília did not yet exist. How far each went, which way, and how many capitals were built from nothing.</p>
+</header>
+<div class="byline">Dr Tristan Hotham · Independent researcher · 2026 · Data: Wikidata, checked and corrected by hand; Natural Earth</div>
+
+<div class="stats">
+  <div><b class="h">{{n|int}}</b><span>moves of a capital since 1500, {{n_lasting|int}} lasting and {{n_temp|int}} temporary (in wartime, or there and back)</span></div>
+  <div><b class="c">{{lisbon_rio.km|int}} km</b><span>the longest: Lisbon to Rio de Janeiro in 1808, twice as far as the runner-up</span></div>
+  <div><b class="g">{{c20.n|int}}</b><span>moves in the 20th century, more than in any other</span></div>
+  <div><b>{{n_purpose_built|int}}</b><span>moves into a capital built for the purpose, from St Petersburg to Ciudad de la Paz</span></div>
+</div>
+
+<p class="lede">Most capitals feel permanent. London, Paris and Beijing have been where they are for so long that it is hard to imagine them anywhere else. But capitals move more often than you might think. Brazil built Brasília in four years and moved there in 1960; Nigeria left Lagos for Abuja in 1991; Myanmar's government packed up for Naypyidaw, a city it had built in secret, in 2005. And in January 2026 Equatorial Guinea moved its capital from Malabo, on an island, to Ciudad de la Paz on the mainland.</p>
+<p>I wanted to see all of these on one map. Wikidata, the open database behind Wikipedia, records the capitals of thousands of states with the years each was the capital, so it should be possible to draw every move as an arc from the old capital to the new. It is, but only after a lot of checking: the dates are patchy, the same move is often recorded on several items, and some of the most famous moves are missing altogether. I checked the famous ones against cited sources, corrected what was wrong, added what was missing, and wrote every change down. The result is {{n|int}} moves since 1500 by {{n_states|int}} states. Press play, drag the slider, or tap an arc for its story.</p>
+
+<h2><span class="n">01 · The map</span>Every move, old capital to new</h2>
+<div class="bleed" id="atlas">
+<div class="timeline">
+  <button class="btn play" id="play" aria-label="Play through the years">▶ Play</button>
+  <input type="range" id="yr" min="1500" max="{{last_year|yr}}" step="1" value="{{last_year|yr}}" aria-label="Show moves up to this year">
+  <div class="yearbig" id="yrlab">{{last_year|yr}}</div>
+</div>
+<div class="controls">
+  <div class="scrollrow" id="kindRow"><span class="ctl-l">Show</span><button class="btn" data-k="all" aria-pressed="true">All moves</button><button class="btn" data-k="l" aria-pressed="false">Lasting</button><button class="btn" data-k="t" aria-pressed="false">Temporary</button><button class="btn" data-k="pb" aria-pressed="false">Into a new-built capital</button></div>
+</div>
+<div class="controls">
+  <div class="searchbox"><input type="search" id="q" placeholder="Search a country, state or city" aria-label="Search a country, state or city" autocomplete="off"><ul class="suggest" id="sug" role="listbox"></ul></div>
+  <button class="btn" id="clear" hidden>Show all</button>
+</div>
+<div class="mapgrid">
+  <div><div id="map" class="lmap" role="application" aria-label="World map of capital moves since 1500, as arcs from old capital to new"></div>
+    <div class="legend" id="legend"></div></div>
+  <div class="side" id="side" aria-live="polite"></div>
+</div>
+<p class="src">Arcs follow the great circle from the old capital (hollow dot) to the new one (filled dot). Solid arcs are lasting moves; dashed arcs are temporary seats in wartime or a crisis, or moves that went back within ten years. Moves before the slider's year are shown fainter the older they are. Data: Wikidata (CC0), with {{edits.n|int}} hand edits listed in <a href="data/manual_edits.csv">manual_edits.csv</a>.</p>
+</div>
+
+<h2><span class="n">02 · When</span>A restless 20th century</h2>
+<p>The 20th century saw more moves than any other: {{c20.n|int}}, of which {{c20.lasting|int}} lasted. Some were born of war and revolution: the Bolsheviks left Petrograd for Moscow in 1918, Atatürk's republic chose Ankara over Istanbul in 1923, and the Republic of China retreated from Nanjing to Chongqing in 1937 and, in {{busiest_year.y|yr}}, through Guangzhou, Chongqing and Chengdu to Taipei. The busiest decade of all is the {{busiest_decade.d|yr}}s, with {{busiest_decade.n|int}} moves, most of them wartime. Others were deliberate: Canberra, Brasília, Islamabad, Abuja.</p>
+<div class="figure"><p class="fig-h">Capital moves by century, since 1500</p><p class="fig-sub">Lasting moves and temporary ones (wartime or crisis seats, and moves that went back within ten years). The 21st century has had only 26 years. Hover for values.</p><div class="chart" id="centChart"></div></div>
+<div class="figure"><p class="fig-h">Every move, decade by decade</p><p class="fig-sub">Moves per decade, coloured by century, with a few landmarks. Hover a bar for the moves.</p><div class="chart" id="decChart"></div></div>
+<p>The earlier centuries look quieter partly because they were, and partly because they are less well recorded. Wikidata knows a great deal about the European states of the 16th to 18th centuries, down to small German principalities that moved their courts a few kilometres to a new palace, and much less about Africa, Asia and the Americas before the colonial era. Read the counts as moves that the record knows about.</p>
+
+<h2><span class="n">03 · How far</span>From across the street to across an ocean</h2>
+<p>Most moves are short. The median lasting move is {{median_km_lasting|int}} km, and {{under_100_lasting_pct|pc}} of lasting moves covered less than 100 km: Thonburi to Bangkok across the Chao Phraya in 1782 ({{shortest_lasting.0.km|int}} km), Durlach to the new palace city of Karlsruhe in 1715. But a few crossed continents and oceans.</p>
+<div class="figure"><p class="fig-h">The longest moves since 1500</p><p class="fig-sub">Great-circle distance from the old capital to the new. Dashed: a temporary seat. Hover for the story.</p><div class="chart" id="longChart"></div></div>
+<p>The record holder is the Portuguese court's flight from Napoleon's army in 1807: the royal family, the government and thousands of courtiers sailed from Lisbon and set up in Rio de Janeiro in 1808, {{lisbon_rio.km|int}} km away. For thirteen years a European empire was ruled from the Americas; King João VI went home in 1821. The longest lasting move is the Sultan of Oman's: in {{ex.zanzibar.year|yr}} Said bin Sultan moved his capital from Muscat to Stone Town on Zanzibar, {{ex.zanzibar.km|int}} km down the coast of Africa, the heart of his trading empire. Next come Chengdu to Taipei ({{ex.taipei.km|int}} km) and Calcutta to Delhi ({{ex.delhi.km|int}} km).</p>
+
+<h2><span class="n">04 · Built from nothing</span>Capitals made to order</h2>
+<p>{{n_purpose_built|int}} of the moves went to a capital that was built, or laid out as a new town, for the purpose. The idea is old: Peter the Great founded St Petersburg in 1703 and moved his court there from Moscow in 1712, and the margraves of Baden laid out Karlsruhe in 1715 as a fan of streets around their palace. Washington was planned from 1791. But {{n_pb_since_1900|int}} of the {{n_purpose_built|int}} came after 1900, when a new capital became a statement of nationhood: New Delhi, Canberra, Brasília, Islamabad, Belmopan, Gaborone, Abuja, Naypyidaw.</p>
+<div class="figure"><p class="fig-h">Purpose-built capitals: founded, then occupied</p><p class="fig-sub">Each line runs from when building began (or the city was founded) to when the government moved in. Hover for details.</p><div class="chart" id="pbChart"></div></div>
+<h3>Away from the coast</h3>
+<p>Many modern moves went inland. Of the {{sea.modern_n|int}} lasting moves since 1900, {{sea.inland_n|int}} ({{sea.inland_pct|pc}}) left a capital within 50 km of the sea for one at least 50 km further inland, against {{sea.early_inland_pct|pc}} of the moves before 1900. Rio to Brasília, Lagos to Abuja, Dar es Salaam to Dodoma, Yangon to Naypyidaw, Abidjan to Yamoussoukro, Karachi to Islamabad, Malabo to Ciudad de la Paz: a colonial port gives way to a capital in the interior, often closer to the country's middle. Only one went the other way: the Republic of China's flight to Taipei. Of {{centre.n|int}} lasting moves since 1900 within one present-day country, {{centre.closer|int}} brought the capital at least 25 km closer to the centre of the country's main landmass; Brasília is {{centre.brasilia|int}} km closer to Brazil's centre than Rio.</p>
+<div class="figure"><p class="fig-h">Distance from the sea, before and after</p><p class="fig-sub">Lasting moves since 1900: each line joins the old capital's distance from the sea (left) to the new one's (right). Highlighted: from the coast to the interior. Square-root scale. Hover for the move.</p><div class="chart" id="seaChart"></div></div>
+
+<h2><span class="n">05 · Who moved most</span>The restless and the settled</h2>
+<p>Counted by present-day country, the United States has the most moves: {{countries.0.n|int}}, but only {{countries.0.lasting|int}} of them lasting. Eleven belong to the young republic itself: the Continental Congress fled the British to Baltimore, Lancaster and York, was driven out of Philadelphia by unpaid soldiers in 1783, and sat in Princeton, Annapolis, Trenton and New York before settling on Philadelphia and then Washington in 1800. The rest are the Kingdom of Hawaiʻi and the Republic of Texas. Germany is next with {{countries.1.n|int}}, from {{germany.states|int}} different states, most of them small German courts; then India and China ({{countries.2.n|int}} each), Russia and France ({{countries.4.n|int}}).</p>
+<div class="figure"><p class="fig-h">Most moves since 1500, by present-day country</p><p class="fig-sub">Each move is counted under the present-day country where most of its state's capitals lie. Hover for the states.</p><div class="chart" id="ctryChart"></div></div>
+<p>At the other end, {{raw.sovereign_one_capital_pct|pc}} of present-day sovereign states have only one capital in Wikidata. That is true for some (Copenhagen has been Denmark's capital for centuries) but it also hides a great deal: Wikidata does not record, for example, that Belize moved from Belize City, that the Philippines spent 28 years with Quezon City as its capital, or that Turkey's capital was Istanbul until 1923. I added those by hand, but there will be many more.</p>
+<p class="pull">The longest move of a capital since 1500 was not a planned new city but a flight: the Portuguese court, {{lisbon_rio.km|int}} km from Lisbon to Rio de Janeiro.</p>
+
+<h2><span class="n">06 · The famous moves, checked</span>What Wikidata got right, and what it missed</h2>
+<p>Of the {{famous_n|int}} famous moves I checked by hand, {{famous_in_wd|int}} were in Wikidata (some recorded twice, once with the wrong year) and the rest were missing and had to be added. Every check, correction and addition is in <a href="data/manual_edits.csv">manual_edits.csv</a> with its source.</p>
+<div class="tablewrap"><table class="t" id="famTable"><thead><tr><th>Move</th><th>Year</th><th>State</th><th class="num">km</th><th>In Wikidata?</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+
+<h2><span class="n">07 · Still moving</span>Nusantara, and a new capital in 2026</h2>
+<div class="note" id="plannedNote"></div>
+<p>The newest move in the data is Equatorial Guinea's, in {{latest.year|yr}}: a presidential decree reported in January moved the capital {{latest.km|int}} km from Malabo, on the island of Bioko, to Ciudad de la Paz, a planned city in the mainland forest, and gave the government a year to relocate. Egypt's New Administrative Capital and South Korea's Sejong City, which house ministries but are not the official capital, are not counted.</p>
+
+<h2><span class="n">08 · How I did this</span>Methods and caveats</h2>
+<p><b>The data.</b> I took every capital (P36) statement in Wikidata for items that are countries, sovereign states, historical countries, kingdoms, realms, republics, empires and constitutional monarchies, with the statement's start and end years, its rank, the capital's coordinates, and the state's founding and end dates: {{raw.statements|int}} statements for {{raw.states|int}} states. Only {{raw.dated_pct|f1}}% of statements have a start or an end year. I kept states that still existed after 1500.</p>
+<p><b>Reading moves.</b> A move is read where one capital's time starts and another's ends within two years; or where a new capital starts and the old one has no end date; or where the old one ends and a new one with no start date runs on. Capitals that overlap for more than two years are treated as joint capitals, not a move. Deprecated statements and "unknown value" capitals are left out. States with several capitals but no dates at all ({{raw.undated_multi|int}} of them) cannot be placed in time and are not counted. Renamings and redefinitions of the same city (Edo to Tokyo, Constantinople to Istanbul, Buda to Budapest) are not moves. The same move recorded on several items (Russia's Tsardom and Empire, Portugal's Kingdom and Empire) is counted once. This gave {{raw.auto_moves|int}} candidate moves since 1500.</p>
+<p><b>Checking by hand.</b> I then checked the moves people know best against cited sources (mostly English Wikipedia articles, and news reports for 2026) and fixed what I found: {{edits.drop|int}} automatic moves removed (wrong order, wrong item, an institution's seat rather than the capital, duplicates with a different year), {{edits.fix|int}} corrected, {{edits.check|int}} confirmed, and {{edits.add|int}} added. Each change is a row in the edits file, with the reason and a link. Where I was not sure, I left Wikidata as it is.</p>
+<p><b>Measuring.</b> Distances are great-circle distances between the two capitals' coordinates; direction is the initial compass bearing. Each move is placed in the present-day country where most of its state's capitals lie (Natural Earth borders). Distance from the sea is to the nearest ocean coastline in Natural Earth's land polygons (so the Caspian and the great lakes do not count). A move is temporary if the new seat was held for less than a year, if the capital was back where it started within ten years, or if it was a wartime or exile seat (listed by hand).</p>
+<p><b>Confidence.</b> Every move carries a flag: checked (against a cited source, {{conf.checked|int}}), high (Wikidata dates both ends consistently, {{conf.high|int}}) or medium (one end dated, {{conf.medium|int}}). High confidence means the record is internally consistent, not that a historian would agree: Wikidata's dates for medieval and early modern states are often rounded or disputed.</p>
+<p><b>What this is not.</b> It is not a complete history. It counts moves of a state's recorded capital, which for older states often means a royal court or a ruler's residence. It misses moves Wikidata does not record and that I did not add, and it is much richer for Europe than elsewhere. Colonies appear as their own states (German East Africa, British North Borneo), present-day countries only where Wikidata gives them past capitals. The word "capital" also hides real ambiguity: Bolivia, the Netherlands, South Africa, Benin and Malaysia divide the functions of a capital between cities, and some moves (Dodoma, Yamoussoukro, Kotte) moved the title, or parliament, long before the ministries followed.</p>
+<details><summary>Sources and licences</summary>
+<ul>
+<li>Wikidata, capital (P36) statements with start time (P580), end time (P582) and rank, coordinates (P625), inception (P571) and dissolution (P576), via QLever, retrieved {{retrieved|raw}}. CC0.</li>
+<li>Hand edits: {{edits.n|int}} checks, corrections and additions, each with a source, mostly English Wikipedia articles (CC BY-SA 4.0, cited, not copied) and, for 2026, news reports (africanews, The Star, The Jakarta Post). <a href="data/manual_edits.csv">manual_edits.csv</a>.</li>
+<li>Natural Earth countries, land and populated places (public domain): present-day countries, the coastline and city names.</li>
+<li>Base map tiles © Esri.</li>
+</ul></details>
+
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23847842">Read the paper</a><a href="https://github.com/Tristan-Hotham/moving-capitals">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/31/moving-capitals/">Blog post</a><a href="data/moves.csv">Download the moves (CSV)</a></div>
+
+<footer>
+<p>Dr Tristan Hotham, Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+<p>Cite as: Hotham, T. (2026) Capitals that moved: every capital move since 1500 in Wikidata, checked and corrected. Zenodo. <a href="https://doi.org/10.5281/zenodo.23847842">10.5281/zenodo.23847842</a></p>
+<p>Licence: code MIT; text, figures and data CC BY 4.0. Wikidata is CC0; Natural Earth is public domain.</p>
+<p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<button class="btn theme" id="theme" aria-label="Switch light or dark">◐</button>
+<div class="tip" id="tip"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+const R = /*RESULTS*/;
+const fmt = n => n == null || n === "" ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+document.addEventListener("click", e => { if (!e.target.closest("svg")) hideTip(); });
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const redraws = [];
+function resp(box, render) { let last = 0; const go = force => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const small = () => innerWidth < 900;
+const tipAt = (e, h) => { const t = e.touches ? e.touches[0] : e; showTip(h, t.clientX, t.clientY); };
+const hover = (node, h) => { node.style.cursor = "pointer"; node.addEventListener("mousemove", e => tipAt(e, h)); node.addEventListener("mouseleave", hideTip); node.addEventListener("click", e => { e.stopPropagation(); tipAt(e, h); }); };
+const CENT = R.by_century.map(c => ({ c: c.c, name: c.name, col: c.col }));
+const DARKCOL = { 1500: "#D29A5A", 1600: "#EE7A5F", 1700: "#D27BB0", 1800: "#7FA4E8", 1900: "#4CC3BD", 2000: "#F2C14E" };
+const ccol = y => { const c = Math.max(...CENT.map(c => c.c).filter(c => c <= y)); return isDark() ? DARKCOL[c] : CENT.find(x => x.c === c).col; };
+const cname = y => CENT.filter(c => c.c <= y).pop().name;
+const arrow = " → ";
+const kindTxt = m => m.k === "t" ? "Temporary" : "Lasting";
+const confTxt = { checked: "Checked against a cited source", high: "High: Wikidata dates both ends consistently", medium: "Medium: only one end is dated in Wikidata", low: "Low: a gap in the record" };
+
+/* hero mark: a removal box with arcs */
+(function () {
+  const g = document.getElementById("heroMark");
+  const pts = [[16, 86, 120, 30, "#B8452A"], [20, 96, 134, 70, "#23408E"], [30, 60, 110, 92, "#C99A06"], [12, 40, 70, 16, "#1E8C88"]];
+  pts.forEach(([x1, y1, x2, y2, c]) => {
+    const mx = (x1 + x2) / 2, my = Math.min(y1, y2) - 26;
+    el("path", { d: `M${x1},${y1} Q${mx},${my} ${x2},${y2}`, fill: "none", stroke: c, "stroke-width": 4, "stroke-linecap": "round" }, g);
+    el("circle", { cx: x1, cy: y1, r: 5, fill: "var(--bg)", stroke: c, "stroke-width": 3 }, g);
+    el("circle", { cx: x2, cy: y2, r: 6, fill: c }, g);
+  });
+})();
+
+/* ---------- the map ---------- */
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const ESRI_ATT = 'Tiles &copy; Esri | Wikidata, Natural Earth';
+const LYDEF = { base: "plain", hills: true, hillK: 35, labels: false, labelK: 80, names: false, nameLvl: 1, today: true, lasting: true, temp: true, capnames: true, pb: true, planned: true, arcK: 90 };
+const LY = { ...LYDEF };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("caps_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("caps_layers", JSON.stringify(LY)); } catch (e) {} };
+const map = L.map("map", { minZoom: 1, maxZoom: 11, maxBounds: [[-75, -240], [86, 240]], zoomSnap: .5, worldCopyJump: false }).setView([28, 15], small() ? 1 : 2);
+["hills:250", "today:420", "arcs:450", "pts:460", "labels:500", "names:620"].forEach(s => { const [n, z] = s.split(":"); map.createPane(n); map.getPane(n).style.zIndex = z; });
+["hills", "labels", "names", "today"].forEach(n => map.getPane(n).style.pointerEvents = "none");
+const arcR = L.canvas({ pane: "arcs", padding: .3, tolerance: small() ? 9 : 5 });
+const ptR = L.canvas({ pane: "pts", padding: .3, tolerance: 4 });
+let base = null, hills = null, labels = null, today = null;
+const names = L.layerGroup(), capnames = L.layerGroup(), pbl = L.layerGroup();
+function setTiles() {
+  [base, labels, hills].forEach(l => { if (l) map.removeLayer(l); });
+  const t = isDark() ? "Dark" : "Light";
+  const url = LY.base === "relief" ? ESRI + "World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}" : LY.base === "satellite" ? ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}" : `${ESRI}Canvas/World_${t}_Gray_Base/MapServer/tile/{z}/{y}/{x}`;
+  base = L.tileLayer(url, { maxZoom: 16, maxNativeZoom: LY.base === "relief" ? 13 : 16, attribution: ESRI_ATT }).addTo(map);
+  hills = L.tileLayer(ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16, maxNativeZoom: 16, pane: "hills" });
+  labels = L.tileLayer(`${ESRI}Canvas/World_${t}_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 16, pane: "labels" });
+  applyLayers();
+}
+function loadBorders() {
+  if (today || loadBorders.busy) return; loadBorders.busy = 1;
+  fetch("data/borders_today.json").then(r => r.json()).then(t => { today = L.geoJSON(topojson.feature(t, t.objects[Object.keys(t.objects)[0]]), { pane: "today", interactive: false, style: () => ({ color: isDark() ? "#9AA0AC" : "#7B7468", weight: .6, opacity: .7, fill: false }) }); applyLayers(); });
+}
+function applyLayers() {
+  if (!base) return;
+  if (LY.hills) { hills.addTo(map); hills.setOpacity(Math.min(1, .15 + LY.hillK / 120)); } else map.removeLayer(hills);
+  if (LY.labels) { labels.addTo(map); labels.setOpacity(LY.labelK / 100); } else map.removeLayer(labels);
+  if (LY.today) { if (today) { today.addTo(map); today.setStyle({ color: isDark() ? "#9AA0AC" : "#7B7468" }); } else loadBorders(); } else if (today) map.removeLayer(today);
+  [[LY.names, names], [LY.capnames, capnames], [LY.pb, pbl]].forEach(([on, l]) => on ? l.addTo(map) : map.removeLayer(l));
+  draw();
+}
+(function layerControl() {
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false">Map layers</button>
+<div class="lyrPanel" hidden>
+ <div class="row"><label style="font-weight:600">Base map</label><div class="sub"><select data-k="base" aria-label="Base map"><option value="plain">Plain grey</option><option value="relief">Shaded relief</option><option value="satellite">Satellite</option></select></div></div>
+ <div class="row"><label><input type="checkbox" data-k="hills"> Hills and mountains</label><div class="sub"><span>strength</span><input type="range" data-k="hillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="labels"> Map labels (today)</label><div class="sub"><span>strength</span><input type="range" data-k="labelK" min="20" max="100" step="5" aria-label="Map label strength"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="names"> City names (today)</label><div class="sub"><span>how many</span><select data-k="nameLvl" aria-label="How many city names"><option value="0">Biggest only</option><option value="1">Some</option><option value="2">Lots</option></select></div></div>
+ <div class="row"><label><input type="checkbox" data-k="today"> Borders (today)</label></div>
+ <div class="hd">Capital moves</div>
+ <div class="row"><label><input type="checkbox" data-k="lasting"> Lasting moves</label></div>
+ <div class="row"><label><input type="checkbox" data-k="temp"> Temporary moves</label></div>
+ <div class="row"><label><input type="checkbox" data-k="capnames"> Names of the capitals</label></div>
+ <div class="row"><label><input type="checkbox" data-k="pb"> Purpose-built capitals (★)</label></div>
+ <div class="row"><label><input type="checkbox" data-k="planned"> Planned move (Nusantara)</label></div>
+ <div class="row"><label style="font-weight:600">Arc strength</label><div class="sub"><input type="range" data-k="arcK" min="30" max="100" step="5" aria-label="Arc strength"></div></div>
+ <button class="reset">Reset layers</button>
+</div>`;
+    return d; } });
+  map.addControl(new Ctl());
+  const box = map.getContainer(), btn = box.querySelector(".lyrBtn"), pan = box.querySelector(".lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => pan.querySelectorAll("[data-k]").forEach(i => { const k = i.dataset.k; if (i.type === "checkbox") i.checked = LY[k]; else i.value = LY[k]; });
+  pan.querySelectorAll("[data-k]").forEach(i => i.addEventListener(i.type === "range" ? "input" : "change", () => {
+    const k = i.dataset.k; LY[k] = i.type === "checkbox" ? i.checked : (k === "base" ? i.value : +i.value);
+    if (k === "hillK") LY.hills = true; if (k === "labelK") LY.labels = true; if (k === "nameLvl") LY.names = true;
+    sync(); saveLY(); if (k === "base") setTiles(); else applyLayers();
+  }));
+  pan.querySelector(".reset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); setTiles(); };
+  sync();
+})();
+const YearCtl = L.Control.extend({ options: { position: "bottomleft" }, onAdd() { const d = L.DomUtil.create("div", "yearlab"); d.id = "mapyear"; return d; } });
+map.addControl(new YearCtl());
+L.control.scale({ imperial: false, position: "bottomright" }).addTo(map);
+
+let SITE = null, CITIES = [];
+const S = { year: R.last_year, kind: "all", focus: null, sel: null, off: new Set(), playing: false };
+const LAYERS = {};   // id -> {arc, a, b}
+let plannedL = null;
+const vis = m => m.y <= S.year && !S.off.has(Math.floor(m.y / 100) * 100) && (S.kind === "all" || (S.kind === "l" && m.k === "l") || (S.kind === "t" && m.k === "t") || (S.kind === "pb" && m.pb)) && (m.k === "l" ? LY.lasting : LY.temp);
+const inFocus = m => !S.focus || S.focus.ids.has(m.id);
+function style(m) {
+  const sel = S.sel === m.id, foc = inFocus(m);
+  const age = S.year - m.y, fade = S.year >= R.last_year ? 1 : age <= 25 ? 1 : age <= 100 ? .55 : .3;
+  let op = (LY.arcK / 100) * fade * (foc ? 1 : .12);
+  if (S.sel && !sel) op *= .55;
+  const w = (m.k === "l" ? 2.4 : 1.6) + (m.km > 1500 ? .4 : 0);
+  return { color: ccol(m.y), weight: sel ? w + 2.2 : w, opacity: sel ? 1 : op, dashArray: m.k === "t" ? "5 5" : null, lineCap: "round" };
+}
+function draw() {
+  if (!SITE) return;
+  const shown = [];
+  SITE.moves.forEach(m => {
+    const Lr = LAYERS[m.id]; const v = vis(m);
+    [Lr.arc, Lr.a, Lr.b].forEach(l => v ? l.addTo(map) : map.removeLayer(l));
+    if (!v) return;
+    shown.push(m);
+    const st = style(m); Lr.arc.setStyle(st);
+    Lr.a.setStyle({ color: st.color, opacity: st.opacity, fillColor: isDark() ? "#151820" : "#FFFCF5", fillOpacity: st.opacity, weight: 1.6 });
+    Lr.b.setStyle({ color: isDark() ? "#151820" : "#FFFCF5", fillColor: st.color, opacity: st.opacity, fillOpacity: Math.min(1, st.opacity + .1), weight: 1 });
+  });
+  if (S.sel && LAYERS[S.sel] && vis(SITE.moves.find(m => m.id === S.sel))) LAYERS[S.sel].arc.bringToFront();
+  if (plannedL) { (LY.planned && S.year >= 2022) ? plannedL.addTo(map) : map.removeLayer(plannedL); }
+  document.getElementById("mapyear").textContent = S.year >= R.last_year ? "1500 to " + R.last_year : S.year;
+  placeLabels(shown);
+  if (!S.sel && !S.focus) sideOverview(shown);
+}
+function boxesHit(boxes, bx) { return boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1]); }
+function placeLabels(shown) {
+  names.clearLayers(); capnames.clearLayers(); pbl.clearLayers();
+  if (!SITE) return;
+  shown = shown || SITE.moves.filter(vis);
+  const z = map.getZoom(), bb = map.getBounds().pad(.05), boxes = [];
+  const sz = map.getSize();
+  // purpose-built stars
+  if (LY.pb) shown.filter(m => m.pb).forEach(m => L.marker(m.tl, { pane: "labels", interactive: false, keyboard: false, icon: L.divIcon({ className: "pbIco", html: "★", iconSize: [16, 16], iconAnchor: [8, 18] }) }).addTo(pbl));
+  if (LY.capnames) {
+    const pri = shown.slice().sort((a, b) => (S.sel === b.id) - (S.sel === a.id) || (inFocus(b) - inFocus(a)) || b.km - a.km);
+    const need = z < 2.5 ? 900 : z < 3.5 ? 300 : z < 4.5 ? 80 : 0;
+    const done = new Set(); let n = 0;
+    for (const m of pri) {
+      if (m.km < need && S.sel !== m.id && !(S.focus && inFocus(m))) continue;
+      for (const [nm, ll, end] of [[m.t, m.tl, 1], [m.f, m.fl, 0]]) {
+        const key = nm + ll.join(); if (done.has(key) || !bb.contains(ll)) continue;
+        const pt = map.latLngToContainerPoint(ll), w = Math.min(190, nm.length * 6.7 + 8), h = 13;
+        const right = pt.x + 8 + w < sz.x; const bx = right ? [pt.x + 6, pt.y - h / 2, pt.x + 8 + w, pt.y + h / 2] : [pt.x - 8 - w, pt.y - h / 2, pt.x - 6, pt.y + h / 2];
+        if (boxesHit(boxes, bx)) continue; boxes.push(bx); done.add(key);
+        L.marker(ll, { pane: "names", interactive: false, keyboard: false, icon: L.divIcon({ className: "capL", html: esc(nm), iconSize: [w, h], iconAnchor: right ? [-7, h / 2] : [w + 7, h / 2] }) }).addTo(capnames);
+      }
+      if (++n > (small() ? 30 : 70)) break;
+    }
+  }
+  if (LY.names) {
+    const minPop = [[3, 8e6], [4, 3e6], [5, 1.2e6], [6, 5e5], [99, 2.5e5]].find(([zz]) => z < zz + (LY.nameLvl === 2 ? 1.5 : LY.nameLvl === 0 ? -1 : 0))[1];
+    let n = 0;
+    for (const c of CITIES) {
+      if (c.pop < minPop && !(c.cap && z >= 4)) continue; if (!bb.contains([c.lat, c.lon])) continue;
+      const pt = map.latLngToContainerPoint([c.lat, c.lon]), w = c.name.length * 6.2 + 10, bx = [pt.x - 3, pt.y - 7, pt.x + w, pt.y + 7];
+      if (boxesHit(boxes, bx)) continue; boxes.push(bx);
+      L.marker([c.lat, c.lon], { pane: "names", interactive: false, keyboard: false, icon: L.divIcon({ className: "cityL s", html: `<i></i>${esc(c.name)}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(names);
+      if (++n >= 80) break;
+    }
+  }
+}
+map.on("zoomend moveend", () => placeLabels());
+
+/* ---------- side panel ---------- */
+const side = document.getElementById("side");
+const mrow = m => `<tr><td><span class="sw" style="background:${ccol(m.y)}"></span><span class="go" data-id="${m.id}">${esc(m.f)}${arrow}${esc(m.t)}</span><br><span style="color:var(--muted)">${esc(m.s)}</span></td><td class="num">${m.y}<br>${fmt(m.km)} km</td></tr>`;
+function wire() { side.querySelectorAll("[data-id]").forEach(x => x.onclick = () => select(x.dataset.id, true)); side.querySelectorAll("[data-c]").forEach(x => x.onclick = () => focusOn(x.dataset.c)); const b = side.querySelector(".back"); if (b) b.onclick = () => { S.sel = null; map.closePopup(); S.focus ? focusOn(S.focus.key, false) : draw(); }; }
+function sideOverview(shown) {
+  const yr = S.year >= R.last_year ? `since 1500` : `from 1500 to ${S.year}`;
+  const last = shown.slice().sort((a, b) => b.y - a.y || b.km - a.km).slice(0, 10);
+  const longest = shown.slice().sort((a, b) => b.km - a.km).slice(0, 5);
+  side.innerHTML = `<h4>On the map</h4><div class="big">${fmt(shown.length)} moves</div><p class="sub">${yr}${S.kind !== "all" ? ", " + { l: "lasting only", t: "temporary only", pb: "into purpose-built capitals" }[S.kind] : ""}. Tap an arc for its story, or search for a country.</p>
+  <h4>${S.year >= R.last_year ? "Most recent" : "Latest by " + S.year}</h4><table>${last.map(mrow).join("")}</table>
+  <h4>Longest shown</h4><table>${longest.map(mrow).join("")}</table>`;
+  wire();
+}
+function story(m) {
+  const also = m.also && m.also.length ? `<p class="sub">Also recorded in Wikidata for: ${m.also.map(esc).join("; ")}.</p>` : "";
+  const wd = q => q && /^Q\d+$/.test(q) ? `<a href="https://www.wikidata.org/wiki/${q}">${q}</a>` : "";
+  return `<button class="back">← Back</button><h4>${m.y} · ${esc(cname(m.y))}</h4>
+  <div class="big">${esc(m.f)}${arrow}${esc(m.t)}</div>
+  <p class="sub">${esc(m.s)}${m.c && m.c !== m.s ? " · " + esc(m.c) + " today" : ""}</p>
+  <div><span class="pill">${fmt(m.km)} km ${esc(m.d)}</span><span class="pill ${m.k === "t" ? "t" : ""}">${kindTxt(m)}${m.tw ? ": " + esc(m.tw) : ""}</span>${m.pb ? '<span class="pill c">★ purpose-built capital</span>' : ""}</div>
+  <p class="story">${esc(m.n)}</p>
+  ${m.pb ? `<div class="why">${esc(m.pbn)}</div>` : ""}
+  <table><tr><td>Confidence</td><td>${esc(confTxt[m.cf])}</td></tr><tr><td>Basis</td><td>${esc(m.b)}</td></tr>
+  <tr><td>Distance from the sea</td><td>${fmt(m.fc)} km${arrow}${fmt(m.tc)} km</td></tr>
+  <tr><td>Wikidata</td><td>${[wd(m.q), wd(m.fq), wd(m.tq)].filter(Boolean).join(" · ") || "n/a"}</td></tr>
+  ${m.src ? `<tr><td>Source</td><td><a href="${esc(m.src)}">${esc(m.src.replace(/^https?:\/\/(www\.)?/, "").slice(0, 46))}</a></td></tr>` : ""}</table>${also}
+  ${S.focus ? "" : `<p class="sub"><span class="go" data-c="${esc(m.c)}">All moves in ${esc(m.c)}</span></p>`}`;
+}
+function select(id, fly) {
+  const m = SITE.moves.find(x => x.id === id); if (!m) return;
+  if (m.y > S.year) { S.year = R.last_year; syncYear(); }
+  if (!vis(m)) { S.kind = "all"; S.off.delete(Math.floor(m.y / 100) * 100); LY.lasting = LY.temp = true; syncKind(); legend(); }
+  S.sel = id; draw(); side.innerHTML = story(m); wire();
+  const b = L.latLngBounds([m.fl, m.tl]);
+  if (fly) map.flyToBounds(b.pad(.6), { maxZoom: 6, duration: .6 });
+  L.popup({ maxWidth: 260, autoPan: false }).setLatLng(m.g[Math.floor(m.g.length / 2)]).setContent(`<b>${esc(m.f)}${arrow}${esc(m.t)}</b><br>${esc(m.s)}, ${m.y}<br>${fmt(m.km)} km ${esc(m.d)} · ${kindTxt(m).toLowerCase()}`).openOn(map);
+}
+function focusOn(key, fit = true) {
+  const ms = SITE.moves.filter(m => m.c === key || m.s === key || m.f === key || m.t === key);
+  if (!ms.length) return;
+  S.focus = { key, ids: new Set(ms.map(m => m.id)) }; S.sel = null; draw();
+  document.getElementById("clear").hidden = false;
+  side.innerHTML = `<button class="back" id="unfocus">← All moves</button><h4>Search</h4><div class="big">${esc(key)}</div><p class="sub">${ms.length} move${ms.length > 1 ? "s" : ""} since 1500. Tap one for its story.</p><table>${ms.sort((a, b) => a.y - b.y).map(mrow).join("")}</table>`;
+  wire(); document.getElementById("unfocus").onclick = clearFocus;
+  if (fit) { const b = L.latLngBounds(ms.flatMap(m => [m.fl, m.tl])); map.flyToBounds(b.pad(.35), { maxZoom: 6, duration: .6 }); }
+}
+function clearFocus() { S.focus = null; S.sel = null; document.getElementById("clear").hidden = true; document.getElementById("q").value = ""; map.closePopup(); draw(); }
+document.getElementById("clear").onclick = clearFocus;
+
+/* ---------- legend, filters, time ---------- */
+function legend() {
+  const lg = document.getElementById("legend");
+  lg.innerHTML = CENT.map(c => `<button data-c="${c.c}" aria-pressed="${!S.off.has(c.c)}" title="Show or hide the ${c.name}"><i style="background:${ccol(c.c)}"></i>${c.name}</button>`).join("") +
+    `<span class="key"><svg width="26" height="8"><line x1="1" y1="4" x2="25" y2="4" stroke="currentColor" stroke-width="2.4"/></svg>lasting</span><span class="key"><svg width="26" height="8"><line x1="1" y1="4" x2="25" y2="4" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4"/></svg>temporary</span><span class="key"><svg width="12" height="12"><circle cx="6" cy="6" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>old</span><span class="key"><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="currentColor"/></svg>new capital</span><span class="key" style="color:var(--gold)">★</span><span class="key">purpose-built</span>`;
+  lg.querySelectorAll("button").forEach(b => b.onclick = () => { const c = +b.dataset.c; S.off.has(c) ? S.off.delete(c) : S.off.add(c); legend(); draw(); });
+}
+function syncKind() { document.querySelectorAll("#kindRow .btn").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === S.kind)); }
+document.querySelectorAll("#kindRow .btn").forEach(b => b.onclick = () => { S.kind = b.dataset.k; syncKind(); draw(); });
+const yr = document.getElementById("yr"), yrlab = document.getElementById("yrlab");
+function syncYear() { yr.value = S.year; yrlab.textContent = S.year; }
+yr.addEventListener("input", () => { S.year = +yr.value; yrlab.textContent = S.year; S.sel = null; map.closePopup(); draw(); });
+let timer = null;
+const playBtn = document.getElementById("play");
+function stop() { clearInterval(timer); timer = null; S.playing = false; playBtn.textContent = "▶ Play"; }
+playBtn.onclick = () => {
+  if (timer) { stop(); return; }
+  if (S.year >= R.last_year) S.year = 1500;
+  S.playing = true; playBtn.textContent = "❚❚ Pause"; S.sel = null; map.closePopup();
+  timer = setInterval(() => { S.year = Math.min(R.last_year, S.year + 3); syncYear(); draw(); if (S.year >= R.last_year) stop(); }, 110);
+};
+
+/* ---------- search ---------- */
+let INDEX = [];
+function buildIndex() {
+  const c = {}, s = {}, t = {};
+  SITE.moves.forEach(m => { c[m.c] = (c[m.c] || 0) + 1; s[m.s] = (s[m.s] || 0) + 1; t[m.f] = (t[m.f] || 0) + 1; t[m.t] = (t[m.t] || 0) + 1; });
+  const norm = x => x.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  INDEX = [...Object.entries(c).map(([k, n]) => ({ k, n, w: "country today" })), ...Object.entries(s).filter(([k]) => !c[k]).map(([k, n]) => ({ k, n, w: "state" })), ...Object.entries(t).filter(([k]) => !c[k] && !s[k]).map(([k, n]) => ({ k, n, w: "city" }))].map(x => ({ ...x, nk: norm(x.k) }));
+  INDEX.norm = norm;
+}
+const q = document.getElementById("q"), sug = document.getElementById("sug");
+let sugSel = -1;
+function searchFor(v) {
+  const s = INDEX.norm(v.trim()); if (!s) { sug.style.display = "none"; return []; }
+  const hits = INDEX.filter(x => x.nk.includes(s)).sort((a, b) => (b.nk.startsWith(s) - a.nk.startsWith(s)) || b.n - a.n).slice(0, 9);
+  sug.innerHTML = hits.map((h, i) => `<li role="option" data-k="${esc(h.k)}" aria-selected="${i === sugSel}">${esc(h.k)} <span>${h.w} · ${h.n} move${h.n > 1 ? "s" : ""}</span></li>`).join("") || `<li><span>No match</span></li>`;
+  sug.style.display = "block";
+  sug.querySelectorAll("li[data-k]").forEach(li => li.onmousedown = e => { e.preventDefault(); pick(li.dataset.k); });
+  return hits;
+}
+function pick(k) { q.value = k; sug.style.display = "none"; focusOn(k); document.getElementById("atlas").scrollIntoView({ behavior: "smooth", block: "start" }); }
+q.addEventListener("input", () => { sugSel = -1; searchFor(q.value); });
+q.addEventListener("keydown", e => {
+  const li = [...sug.querySelectorAll("li[data-k]")];
+  if (e.key === "ArrowDown") { sugSel = Math.min(li.length - 1, sugSel + 1); } else if (e.key === "ArrowUp") { sugSel = Math.max(0, sugSel - 1); }
+  else if (e.key === "Enter") { const t = li[Math.max(0, sugSel)]; if (t) pick(t.dataset.k); return; } else if (e.key === "Escape") { sug.style.display = "none"; return; } else return;
+  li.forEach((x, i) => x.setAttribute("aria-selected", i === sugSel)); e.preventDefault();
+});
+q.addEventListener("blur", () => setTimeout(() => sug.style.display = "none", 150));
+
+/* ---------- load ---------- */
+Promise.all([fetch("data/site.json").then(r => r.json()), fetch("data/cities.json").then(r => r.json())]).then(([site, cities]) => {
+  SITE = site; CITIES = cities;
+  SITE.moves.forEach(m => {
+    const arc = L.polyline(m.g, { renderer: arcR, interactive: true, bubblingMouseEvents: false });
+    arc.on("click", e => { L.DomEvent.stop(e); select(m.id, false); });
+    arc.on("mouseover", e => { if (!small()) arc.setStyle({ weight: style(m).weight + 1.5 }); });
+    arc.on("mouseout", () => arc.setStyle(style(m)));
+    const a = L.circleMarker(m.fl, { renderer: ptR, radius: 3.6, interactive: true, bubblingMouseEvents: false }).on("click", e => { L.DomEvent.stop(e); select(m.id, false); });
+    const b = L.circleMarker(m.tl, { renderer: ptR, radius: 4.4, interactive: true, bubblingMouseEvents: false }).on("click", e => { L.DomEvent.stop(e); select(m.id, false); });
+    LAYERS[m.id] = { arc, a, b };
+  });
+  const p = SITE.planned[0];
+  if (p) {
+    plannedL = L.layerGroup([L.polyline(p.g, { renderer: arcR, color: "#7B7468", weight: 2, dashArray: "2 6", opacity: .9 }), L.circleMarker(p.tl, { renderer: ptR, radius: 5, color: "#7B7468", fillColor: "#FFFCF5", fillOpacity: 1, weight: 2 })]);
+    plannedL.eachLayer(l => l.on("click", e => { L.DomEvent.stop(e); side.innerHTML = `<button class="back">← Back</button><h4>Planned, not made</h4><div class="big">${esc(p.f)}${arrow}${esc(p.t)}</div><p class="sub">${esc(p.s)} · ${fmt(p.km)} km</p><p class="story">${esc(p.n)}</p>` + p.src.map(s => `<p class="sub"><a href="${esc(s)}">${esc(s.replace(/^https?:\/\/(www\.)?/, "").slice(0, 50))}</a></p>`).join(""); wire(); }));
+    document.getElementById("plannedNote").innerHTML = `<h3>${esc(p.f)}${arrow}${esc(p.t)}: planned, not made</h3><p>${esc(p.n)}</p><p class="src">Sources: ${p.src.map(s => `<a href="${esc(s)}">${esc(s.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>`).join(", ")}. The planned move ({{planned.0.km|int}} km) is drawn as a dotted grey arc on the map but is not counted.</p>`;
+  }
+  buildIndex(); legend(); setTiles();
+  window.addEventListener("resize", () => placeLabels());
+});
+
+/* ---------- charts ---------- */
+function stackedCent(box) {
+  resp(box, (W, sm) => {
+    const H = sm ? 250 : 270, m = { l: 34, r: 8, t: 14, b: 40 }, D = R.by_century, max = Math.ceil(Math.max(...D.map(d => d.n)) / 10) * 10;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), bw = (W - m.l - m.r) / D.length, y = v => H - m.b - v / max * (H - m.t - m.b);
+    for (let v = 0; v <= max; v += 10) { el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: css("--rule") }, svg); lbl(svg, m.l - 6, y(v) + 4, v, "lab s m", "end"); }
+    D.forEach((d, i) => {
+      const x = m.l + i * bw + bw * .14, w = bw * .72, col = ccol(d.c);
+      const g = el("g", {}, svg);
+      el("rect", { x, y: y(d.lasting), width: w, height: y(0) - y(d.lasting), fill: col }, g);
+      el("rect", { x, y: y(d.n), width: w, height: y(d.lasting) - y(d.n), fill: col, opacity: .42 }, g);
+      lbl(svg, x + w / 2, y(d.n) - 5, d.n, "lab b", "middle");
+      lbl(svg, x + w / 2, H - m.b + 16, sm ? d.name.replace(" century", "") : d.name, "lab s", "middle");
+      if (sm) lbl(svg, x + w / 2, H - m.b + 29, "c.", "lab t m", "middle");
+      hover(g, `<b>${d.name}</b><br>${d.n} moves: ${d.lasting} lasting, ${d.temp} temporary<br>${d.added} added by hand<br>median distance ${fmt(d.median_km)} km`);
+    });
+    el("rect", { x: W - (sm ? 150 : 210), y: 4, width: 12, height: 12, fill: css("--fg") }, svg); lbl(svg, W - (sm ? 134 : 194), 14, "lasting", "lab s");
+    el("rect", { x: W - (sm ? 80 : 130), y: 4, width: 12, height: 12, fill: css("--fg"), opacity: .42 }, svg); lbl(svg, W - (sm ? 64 : 114), 14, "temporary", "lab s");
+  });
+}
+function decades(box) {
+  resp(box, (W, sm) => {
+    const D = R.by_decade, H = sm ? 214 : 232, m = { l: 26, r: 8, t: 50, b: 26 }, max = Math.max(...D.map(d => d.n));
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), bw = (W - m.l - m.r) / D.length, y = v => H - m.b - v / max * (H - m.t - m.b);
+    [0, 5, 10, 15].filter(v => v <= max).forEach(v => { el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: css("--rule") }, svg); lbl(svg, m.l - 5, y(v) + 4, v, "lab t m", "end"); });
+    const byDec = {}; (SITE ? SITE.moves : []).forEach(mv => { const d = Math.floor(mv.y / 10) * 10; (byDec[d] = byDec[d] || []).push(mv); });
+    D.forEach((d, i) => {
+      const x = m.l + i * bw, g = el("g", {}, svg);
+      el("rect", { x: x + .5, y: y(d.n), width: Math.max(1, bw - 1), height: y(0) - y(d.n), fill: ccol(d.d) }, g);
+      el("rect", { x, y: m.t, width: bw, height: H - m.t - m.b, fill: "transparent" }, g);
+      const list = (byDec[d.d] || []).sort((a, b) => a.y - b.y).slice(0, 8).map(mv => `${mv.y} ${esc(mv.f)}${arrow}${esc(mv.t)}`).join("<br>");
+      hover(g, `<b>${d.d}s: ${d.n} move${d.n === 1 ? "" : "s"}</b>${list ? "<br>" + list : ""}${(byDec[d.d] || []).length > 8 ? "<br>…" : ""}`);
+      if (d.d % 100 === 0) lbl(svg, x, H - m.b + 15, d.d, "lab t m", "start");
+    });
+    const marks = [[1712, "St Petersburg", 0], [1808, "Rio", 1], [1918, "Moscow", 0], [1960, "Brasília", 1], [2026, "Ciudad de la Paz", 2]];
+    marks.forEach(([yy, t, row]) => { const x = m.l + ((yy - 1500) / 10 + .5) * bw; el("line", { x1: x, x2: x, y1: 13 + row * 12, y2: m.t, stroke: css("--muted"), "stroke-width": .8 }, svg); lbl(svg, x, 10 + row * 12, `${t} ${yy}`, "lab t", x > W - 90 ? "end" : x < 60 ? "start" : "middle"); });
+  });
+}
+function longest(box) {
+  resp(box, (W, sm) => {
+    const D = R.longest.slice(0, 10).map(x => ({ ...x, full: SITE ? SITE.moves.find(m => m.id === x.id) : null })), rh = sm ? 40 : 30, m = { l: sm ? 8 : 250, r: 60, t: 6, b: 22 }, H = m.t + m.b + rh * D.length;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), max = 8000, x = v => m.l + v / max * (W - m.l - m.r);
+    [0, 2000, 4000, 6000, 8000].forEach(v => { el("line", { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: css("--rule") }, svg); lbl(svg, x(v), H - 6, fmt(v) + (v === 8000 ? " km" : ""), "lab t m", "middle"); });
+    D.forEach((d, i) => {
+      const yy = m.t + i * rh, g = el("g", {}, svg), bh = sm ? 12 : 16, by = sm ? yy + 20 : yy + (rh - bh) / 2;
+      const r = el("rect", { x: x(0), y: by, width: x(d.km) - x(0), height: bh, fill: ccol(d.year) }, g);
+      if (d.kind === "temporary") { r.setAttribute("fill-opacity", .45); r.setAttribute("stroke", ccol(d.year)); r.setAttribute("stroke-dasharray", "4 3"); }
+      lbl(svg, sm ? m.l : m.l - 8, sm ? yy + 14 : yy + rh / 2 + 4, `${d.from}${arrow}${d.to}, ${d.year}`, "lab s", sm ? "start" : "end");
+      lbl(svg, x(d.km) + 5, by + bh / 2 + 4, fmt(d.km), "lab s b");
+      el("rect", { x: 0, y: yy, width: W, height: rh, fill: "transparent" }, g);
+      hover(g, `<b>${esc(d.from)}${arrow}${esc(d.to)}</b><br>${esc(d.state)}, ${d.year}<br>${fmt(d.km)} km ${d.direction}, ${d.kind}${d.full ? "<br><br>" + esc(d.full.n) : ""}`);
+    });
+  });
+}
+function pbChart(box) {
+  resp(box, (W, sm) => {
+    const D = R.purpose_built.slice().sort((a, b) => a.year - b.year), rh = sm ? 22 : 22, m = { l: sm ? 118 : 200, r: 14, t: 6, b: 24 }, H = m.t + m.b + rh * D.length;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), x0 = 1550, x1 = 2030, x = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r);
+    for (let v = 1600; v <= 2000; v += 100) { el("line", { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: css("--rule") }, svg); lbl(svg, x(v), H - 6, v, "lab t m", "middle"); }
+    D.forEach((d, i) => {
+      const yy = m.t + i * rh + rh / 2, g = el("g", {}, svg), c = ccol(d.year);
+      el("line", { x1: x(d.founded), x2: x(d.year), y1: yy, y2: yy, stroke: c, "stroke-width": 3, "stroke-linecap": "round" }, g);
+      el("circle", { cx: x(d.founded), cy: yy, r: 3.5, fill: css("--bg"), stroke: c, "stroke-width": 2 }, g);
+      el("circle", { cx: x(d.year), cy: yy, r: 4.5, fill: c }, g);
+      const nm = d.to.replace(" (New Delhi from 1931)", "").replace("Delhi", "New Delhi");
+      lbl(svg, m.l - 8, yy + 4, sm ? nm : `${nm}, ${d.country}`, "lab s", "end");
+      el("rect", { x: 0, y: yy - rh / 2, width: W, height: rh, fill: "transparent" }, g);
+      hover(g, `<b>${esc(nm)}</b> (${esc(d.state)})<br>founded or begun ${d.founded}, capital from ${d.year}<br>${esc(d.note)}`);
+    });
+  });
+}
+function seaChart(box) {
+  resp(box, (W, sm) => {
+    const D = (SITE ? SITE.moves : []).filter(m => m.k === "l" && m.y >= 1900), H = sm ? 380 : 420, m = { l: sm ? 92 : 150, r: sm ? 92 : 150, t: 24, b: 16 };
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), max = 2000, y = v => m.t + Math.sqrt(Math.min(v, max) / max) * (H - m.t - m.b);
+    const xl = m.l, xr = W - m.r;
+    [0, 10, 50, 200, 500, 1000, 2000].forEach(v => { el("line", { x1: xl, x2: xr, y1: y(v), y2: y(v), stroke: css("--rule") }, svg); lbl(svg, (xl + xr) / 2, y(v) - 3, v + (v === 0 ? " km from the sea" : " km"), "lab t m", "middle"); });
+    lbl(svg, xl, 12, "old capital", "lab s b", "middle"); lbl(svg, xr, 12, "new capital", "lab s b", "middle");
+    const isIn = d => d.fc <= 50 && d.tc - d.fc >= 50;
+    const used = { l: [], r: [] };
+    D.sort((a, b) => isIn(a) - isIn(b)).forEach(d => {
+      const g = el("g", {}, svg), hi = isIn(d), c = hi ? ccol(d.y) : css("--muted");
+      el("line", { x1: xl, x2: xr, y1: y(d.fc), y2: y(d.tc), stroke: c, "stroke-width": hi ? 2.4 : 1, opacity: hi ? 1 : .45 }, g);
+      el("circle", { cx: xl, cy: y(d.fc), r: hi ? 3.5 : 2.5, fill: c }, g); el("circle", { cx: xr, cy: y(d.tc), r: hi ? 3.5 : 2.5, fill: c }, g);
+      el("line", { x1: xl, x2: xr, y1: y(d.fc), y2: y(d.tc), stroke: "transparent", "stroke-width": 9 }, g);
+      hover(g, `<b>${esc(d.f)}${arrow}${esc(d.t)}</b>, ${d.y}<br>${fmt(d.fc)} km${arrow}${fmt(d.tc)} km from the sea`);
+      if (hi) {
+        const ty = y(d.tc) + 4; if (!used.r.some(u => Math.abs(u - ty) < 12)) { used.r.push(ty); lbl(svg, xr + 7, ty, d.t.replace(" (New Delhi from 1931)", ""), "lab t"); }
+        const fy = y(d.fc) + 4; if (!used.l.some(u => Math.abs(u - fy) < 12)) { used.l.push(fy); lbl(svg, xl - 7, fy, d.f.replace(" (Kolkata)", ""), "lab t", "end"); }
+      }
+    });
+  });
+}
+function ctryChart(box) {
+  resp(box, (W, sm) => {
+    const D = R.countries.slice(0, 12), rh = 26, m = { l: sm ? 116 : 160, r: 40, t: 22, b: 20 }, H = m.t + m.b + rh * D.length, max = Math.ceil(D[0].n / 5) * 5;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, box), x = v => m.l + v / max * (W - m.l - m.r);
+    for (let v = 0; v <= max; v += 5) { el("line", { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: css("--rule") }, svg); lbl(svg, x(v), H - 5, v, "lab t m", "middle"); }
+    const fg = css("--hot");
+    el("rect", { x: m.l, y: 4, width: 12, height: 10, fill: fg }, svg); lbl(svg, m.l + 16, 13, "lasting", "lab t");
+    el("rect", { x: m.l + 80, y: 4, width: 12, height: 10, fill: fg, opacity: .38 }, svg); lbl(svg, m.l + 96, 13, "temporary", "lab t");
+    const states = {}; (SITE ? SITE.moves : []).forEach(mv => { (states[mv.c] = states[mv.c] || new Set()).add(mv.s); });
+    D.forEach((d, i) => {
+      const yy = m.t + i * rh, g = el("g", {}, svg);
+      el("rect", { x: x(0), y: yy + 5, width: x(d.lasting) - x(0), height: rh - 10, fill: fg }, g);
+      el("rect", { x: x(d.lasting), y: yy + 5, width: x(d.n) - x(d.lasting), height: rh - 10, fill: fg, opacity: .38 }, g);
+      lbl(svg, m.l - 8, yy + rh / 2 + 4, d.name, "lab s", "end"); lbl(svg, x(d.n) + 5, yy + rh / 2 + 4, d.n, "lab s b");
+      el("rect", { x: 0, y: yy, width: W, height: rh, fill: "transparent" }, g);
+      hover(g, `<b>${esc(d.name)}</b>: ${d.n} moves, ${d.lasting} lasting<br>${d.states} state${d.states > 1 ? "s" : ""}: ${[...(states[d.name] || [])].map(esc).join("; ")}`);
+      g.addEventListener("dblclick", () => pick(d.name));
+    });
+  });
+}
+function famTable() {
+  const tb = document.querySelector("#famTable tbody");
+  tb.innerHTML = R.famous.map(f => `<tr><td><span class="go" data-id="${f.id}">${esc(f.from)}${arrow}${esc(f.to)}</span></td><td>${f.year}</td><td>${esc(f.state)}</td><td class="num">${fmt(f.km)}</td><td class="${f.status === "added by hand" ? "st-add" : f.status === "corrected" ? "st-cor" : "st-ok"}">${esc(f.status)}</td><td><a href="${esc(f.source)}">${esc(f.source.replace(/^https?:\/\/(en\.)?(www\.)?/, "").replace("wikipedia.org/wiki/", "Wikipedia: ").replace(/_/g, " ").slice(0, 40))}</a></td></tr>`).join("");
+  tb.querySelectorAll("[data-id]").forEach(x => x.onclick = () => { document.getElementById("atlas").scrollIntoView({ behavior: "smooth" }); select(x.dataset.id, true); });
+}
+function charts() {
+  stackedCent(document.getElementById("centChart")); decades(document.getElementById("decChart")); longest(document.getElementById("longChart"));
+  pbChart(document.getElementById("pbChart")); seaChart(document.getElementById("seaChart")); ctryChart(document.getElementById("ctryChart")); famTable();
+}
+const waitSite = setInterval(() => { if (SITE) { clearInterval(waitSite); charts(); } }, 50);
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; setTiles(); legend(); redraws.forEach(f => f()); };
+</script>
+/*FULLSCREEN*/
+</body>
+</html>
