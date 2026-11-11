@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Capitals That Moved: Every Capital Move since 1500 in Wikidata, Checked and Corrected, with Distances, Directions and Purpose-Built Capitals"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23847842"
+url: "https://maps.tristanhotham.com/moving-capitals/"
+repository-code: "https://github.com/Tristan-Hotham/moving-capitals"
+license: CC-BY-4.0
+keywords:
+  - "capital cities"
+  - "capital relocation"
+  - "planned capitals"
+  - "historical geography"
+  - "Wikidata"
+  - "data quality"
+  - "maps"
+  - "open data"
